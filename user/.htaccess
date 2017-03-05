@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteRule ^([a-z]+)\/?$ $1.php [NC]
+RewriteRule ^([a-z]+)\/([0-9]+)\/?$ pendaftaran.php?err=$1 [NC]
+RewriteRule ^([a-z]+)\/([0-9]+)\/?$ pendaftaran.php?success=$1 [NC]
+RewriteRule ^([a-z]+)\/([0-9]+)\/?$ $1.php?err=$1 [NC]
+RewriteRule ^([a-z]+)\/([0-9]+)\/?$ login.php?success=$1 [NC]
