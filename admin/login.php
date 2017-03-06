@@ -19,6 +19,15 @@
 
     <div class="container">
 
+      <?php if (isset($_GET['err'])) { ?>
+            
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://anonymous/project_blk/admin/login'">&times;</span></button>
+          <?= $_GET['err'] ?>
+        </div>
+
+      <?php } ?>
+
       <form class="form-signin" action="prosesLogin.php" method="POST">
         <h2 class="form-signin-heading">Login As Admin</h2>
         <label class="sr-only">Email address</label>

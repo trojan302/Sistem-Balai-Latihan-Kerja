@@ -399,4 +399,47 @@ function checkUser($id){
 
 }
 
+function hitCounter(){
+
+	$sql = "SELECT * FROM counter ORDER BY date_created DESC";
+	$query = mysql_query($sql);
+	$result = mysql_num_rows($query);
+
+	return $result;
+
+}
+
+function userStatistic(){
+
+	$sql = "SELECT * FROM counter ORDER BY date_created DESC";
+	$query = mysql_query($sql);
+	$data = array();
+	while ($result = mysql_fetch_assoc($query)) {
+		$data[] = $result;
+	}
+
+	return $data;
+
+}
+
+function jumlahMendaftar(){
+
+	$sql = "SELECT * FROM peserta WHERE status_peserta='0'";
+	$query = mysql_query($sql);
+	$result = mysql_num_rows($query);
+
+	return $result;
+
+}
+
+function jumlahTerdaftar(){
+
+	$sql = "SELECT * FROM peserta WHERE status_peserta!='0'";
+	$query = mysql_query($sql);
+	$result = mysql_num_rows($query);
+
+	return $result;
+
+}
+
 ?>

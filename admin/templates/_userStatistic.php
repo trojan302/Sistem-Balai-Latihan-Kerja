@@ -1,7 +1,7 @@
 <?php 
 
 require '../config/conn.php';
-require '../config/userStatictis.php';
+require '../config/userStatistic.php';
 
 $ip      = ip_user();
 $browser = browser_user();

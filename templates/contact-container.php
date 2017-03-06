@@ -1,6 +1,4 @@
       <?php
-      	require './config/function.php';
-
       	$query = "SELECT * FROM contact LIMIT 1";
 		$sql = mysql_query($query);
 		$result = mysql_fetch_assoc($sql);

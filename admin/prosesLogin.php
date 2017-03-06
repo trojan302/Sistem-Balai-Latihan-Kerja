@@ -23,6 +23,8 @@ if (isset($_POST['login'])) {
 
 		header('Location: ./index');
 
+	}else{
+		header('Location: ./login.php?err=' . urlencode('You dan\'t have permission!'));
 	}
 
 }

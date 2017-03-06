@@ -4,7 +4,7 @@
             <div class="col-xs-6 col-sm-3 placeholder">
 				<div class="panel panel-primary">
 					<div class="panel-body bg-primary">
-					<h3><b>25163</b></h3>
+					<h3><b><?= $pesertaTotal; ?></b></h3>
 					</div>
 					<div class="panel-footer">
 					<i class="glyphicon glyphicon-scale"></i> &nbsp; Peserta
@@ -14,7 +14,7 @@
             <div class="col-xs-6 col-sm-3 placeholder">
 				<div class="panel panel-warning">
 					<div class="panel-body bg-warning">
-					<h3 class="text-warning"><b>54253</b></h3>
+					<h3 class="text-warning"><b><?= $jumlahMendaftar; ?></b></h3>
 					</div>
 					<div class="panel-footer">
 					<i class="glyphicon glyphicon-scale"></i> &nbsp;  Mendaftar
@@ -24,7 +24,7 @@
             <div class="col-xs-6 col-sm-3 placeholder">
 				<div class="panel panel-success">
 					<div class="panel-body bg-success">
-					<h3 class="text-success"><b>13242</b></h3>
+					<h3 class="text-success"><b><?= $jumlahTerdaftar; ?></b></h3>
 					</div>
 					<div class="panel-footer">
 					<i class="glyphicon glyphicon-scale"></i> &nbsp; Terdaftar
@@ -34,7 +34,7 @@
             <div class="col-xs-6 col-sm-3 placeholder">
 				<div class="panel panel-danger">
 					<div class="panel-body bg-danger">
-					<h3 class="text-danger"><b>13841461</b></h3>
+					<h3 class="text-danger"><b><?= $hitNumber; ?></b></h3>
 					</div>
 					<div class="panel-footer">
 					<i class="glyphicon glyphicon-scale"></i> &nbsp; Counter

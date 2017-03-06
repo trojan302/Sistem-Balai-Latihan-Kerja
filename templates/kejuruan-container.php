@@ -4,8 +4,6 @@
         <div class="row">
 
         <?php
-        require './config/function.php';
-
         $query = "SELECT gelombang.idGelombang AS GelombangID, gelombang.syarat AS Syarat, gelombang.keterangan AS Status, kejuruan.id_kejuruan AS KejuruanID,kejuruan.nama_kejuruan AS KejuruanNama, kejuruan.maxKuota AS MaxKuota  FROM gelombang INNER JOIN kejuruan ON gelombang.idKejuruan=kejuruan.id_kejuruan ORDER BY Status DESC";
         $sql = mysql_query($query);
         while ($data = mysql_fetch_array($sql)) {
