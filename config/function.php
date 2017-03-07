@@ -2,6 +2,9 @@
 
 require './config/conn.php';
 
+$url = "http://anonymous/project_blk/";
+$icon = "http://anonymous/project_blk/libs/photos/icon_blk.png";
+
 function maxKuota($id){
 
 	$query 	= "SELECT * FROM kejuruan WHERE id_kejuruan = '$id'";

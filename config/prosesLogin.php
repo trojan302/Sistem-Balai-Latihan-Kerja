@@ -17,14 +17,14 @@ if (isset($_POST['login'])) {
 
 		$_SESSION['id_peserta'] = $field['id_peserta'];
 
-		header('Location: ../user/index.php');
+		header('Location: ../user/index');
 		
 	} else {
-		header('Location: ../login.php?err=' . urlencode('You dan\'t have permission!'));
+		header('Location: ../login?err=' . urlencode('You dan\'t have permission!'));
 	}
 
 } else {
-	header('Location: ../login.php?err=' . urlencode('You dan\'t have permission!'));
+	header('Location: ../login?err=' . urlencode('You dan\'t have permission!'));
 }
 
 ?>

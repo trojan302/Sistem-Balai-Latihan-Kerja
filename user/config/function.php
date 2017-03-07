@@ -2,6 +2,9 @@
 
 require './config/conn.php';
 
+$url = "http://anonymous/project_blk/";
+$icon = "http://anonymous/project_blk/user/libs/photos/icon_blk.png";
+
 function maxKuota($id){
 
 	$query 	= "SELECT * FROM kejuruan WHERE id_kejuruan = '$id'";
@@ -188,6 +191,46 @@ function getPeserta($id){
 	$result = mysql_fetch_assoc($sql);
 
 	return $result;
+
+}
+
+function namaKejuruan($id_kejuruan){
+
+	$sql = "SELECT nama_kejuruan FROM kejuruan WHERE id_kejuruan='$id_kejuruan'";
+	$query = mysql_query($sql);
+	$result = mysql_fetch_assoc($query);
+
+	return $result['nama_kejuruan'];
+
+}
+
+function namaAgama($id_agama){
+
+	$sql = "SELECT nama FROM agama WHERE id_agama='$id_agama'";
+	$query = mysql_query($sql);
+	$result = mysql_fetch_assoc($query);
+
+	return $result['nama'];
+
+}
+
+function pendidikan($id_pendidikan){
+
+	$sql = "SELECT nama FROM pendidikan WHERE id_pendidikan='$id_pendidikan'";
+	$query = mysql_query($sql);
+	$result = mysql_fetch_assoc($query);
+
+	return $result['nama'];
+
+}
+
+function __generatorID($id_kejuruan){
+
+      $sql = "SELECT CONCAT(LEFT(kejuruan.nama_kejuruan, 2),'-',DATE_FORMAT(peserta.tanggalDaftar, '%Y-%d'),peserta.id_peserta) AS ID_DAFTAR FROM kejuruan INNER JOIN peserta ON kejuruan.id_kejuruan = peserta.id_peserta WHERE kejuruan.id_kejuruan='$id_kejuruan'";
+      $query = mysql_query($sql);
+      $result = mysql_fetch_assoc($query);
+
+      return strtoupper($result['ID_DAFTAR']);
 
 }
 

@@ -3,7 +3,8 @@
 require './config/conn.php';
 
 define('URL', 'http://anonymous/project_blk/admin/');
-
+$url = "http://anonymous/project_blk/";
+$icon = "http://anonymous/project_blk/libs/photos/icon_blk.png";
 
 function maxKuota($id){
 

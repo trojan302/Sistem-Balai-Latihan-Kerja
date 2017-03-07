@@ -9,6 +9,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="http://anonymous/project_blk/libs/photos/icon_blk.png">
 
     <!-- Custom styles for this template -->
     <link href="./libs/signin.css" rel="stylesheet">

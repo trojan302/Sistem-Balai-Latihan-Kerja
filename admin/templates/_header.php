@@ -9,6 +9,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="<?= $icon ?>">
     <link rel="stylesheet" href="node_modules/main.css">
     <link rel="stylesheet" href="http://anonymous/project/wysiwyg/assets/fonts/css/font-awesome.min.css">
 

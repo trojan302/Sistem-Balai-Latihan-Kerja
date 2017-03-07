@@ -8,7 +8,7 @@
     <meta name="author" content="">
 
     <title>Balai Latihan Kerja | PEMKAB Magelang</title>
-    <link rel="icon" href="./libs/photos/icon_blk.png">
+    <link rel="icon" href="<?= $icon; ?>">
 
     <!-- Bootstrap core CSS -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
