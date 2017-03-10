@@ -1,7 +1,7 @@
 <?php 
 
 if (!isset($_GET['lihat'])) {
-	header('Location: http://anonymous/project_blk/admin/peserta');
+	header('Location: http://localhost/project_blk/admin/peserta');
 }
 
 $lihat = getCurrentPeserta($_GET['lihat']);
@@ -9,7 +9,7 @@ $lihat = getCurrentPeserta($_GET['lihat']);
 ?>
 <div class="row">
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-<a href="http://anonymous/project_blk/admin/peserta"><i class="glyphicon glyphicon-arrow-left"></i> Back</a>
+<a href="<?= $url ?>admin/peserta"><i class="glyphicon glyphicon-arrow-left"></i> Back</a>
 <hr>
 
 	<table class="table table-hover table-responsive">
@@ -24,7 +24,7 @@ $lihat = getCurrentPeserta($_GET['lihat']);
 			<th>GENERATE USERS</th>
 			<td>:
 			<?php if($status != 0) { ?>
-				<a href="<?= URL ?>config/generateUsersProses.php?user=<?= $peserta['id_peserta'] ?>" class="btn btn-sm btn-primary">Generate User to <?= $peserta['nama'] ?></a>
+				<a href="<?= $url ?>admin/config/generateUsersProses.php?user=<?= $peserta['id_peserta'] ?>" class="btn btn-sm btn-primary">Generate User to <?= $peserta['nama'] ?></a>
 			<?php }else{ ?>
 				<span class="badge" style="background-color: yellow;color:black;">
 					Cek Status Peserta untuk membuat username dan password otomatis dengan generator.

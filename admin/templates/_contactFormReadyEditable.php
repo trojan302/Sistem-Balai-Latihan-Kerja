@@ -1,4 +1,4 @@
-<form action="<?= URL ?>config/contactProses.php" class="form-group" method="POST">
+<form action="<?= $url ?>admin/onfig/contactProses.php" class="form-group" method="POST">
 	<label>Judul Halaman Kontak :</label>
 	<input type="text" name="contactHeading" class="form-control" value="<?= $data['contactHeading']; ?>" required>
 	<br>

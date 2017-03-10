@@ -6,15 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Admin Panel</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= $url ?>node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="<?= $icon ?>">
-    <link rel="stylesheet" href="node_modules/main.css">
-    <link rel="stylesheet" href="http://anonymous/project/wysiwyg/assets/fonts/css/font-awesome.min.css">
-
-    <!-- Custom styles for this template -->
-    <link href="node_modules/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= $url ?>admin/node_modules/main.css">
+    <link rel="stylesheet" href="<?= $url ?>libs/fonts/css/font-awesome.min.css">
+    <link href="<?= $url ?>node_modules/dashboard.css" rel="stylesheet">
     <style>
       body{
         overflow-x: hidden;
@@ -34,7 +30,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="./">Admin Panel</a>
+          <a class="navbar-brand" href="<?= $url ?>admin/">Admin Panel</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">

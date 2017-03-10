@@ -2,7 +2,7 @@
         <h1>Pendaftaran Balai Latihan Kerja</h1>
         <hr>
         <div class="row">
-        <form action="./config/prosesDaftar.php" method="POST">
+        <form action="<?= $url ?>config/prosesDaftar.php" method="POST">
         	<?php if (isset($_GET['err'])) { ?>
 
 	        <div class="alert alert-danger alert-dismissible" role="alert">

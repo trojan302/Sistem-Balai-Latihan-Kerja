@@ -13,5 +13,6 @@
             <li><a href="./profilpage"><i class="glyphicon glyphicon-picture"></i> Profile Page</a></li>
             <li><a href="./contactpage"><i class="glyphicon glyphicon-phone-alt"></i> Contact Page</a></li>
             <li><a href="./lokerpage"><i class="glyphicon glyphicon-briefcase"></i> Loker Page</a></li>
+            <li><a href="./staf"><i class="glyphicon glyphicon-folder-close"></i> Staf Page</a></li>
           </ul>
         </div>

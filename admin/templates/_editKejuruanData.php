@@ -1,7 +1,7 @@
 <?php 
 
 if (!isset($_GET['edit'])) {
-  header('Location: http://anonymous/project_blk/admin/kejuruan');
+  header('Location: <?= $url ?>admin/kejuruan');
 }
 
 $datas = getCurrentGelombang($_GET['edit']);
@@ -9,7 +9,7 @@ $datas = getCurrentGelombang($_GET['edit']);
 ?>
 <div class="row">
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-<a href="http://anonymous/project_blk/admin/kejuruan"><i class="glyphicon glyphicon-arrow-left"></i> Back</a>
+<a href="<?= $url ?>admin/kejuruan"><i class="glyphicon glyphicon-arrow-left"></i> Back</a>
 <hr>
 
 	<h3>Edit Gelombang Kejuruan</h3>
@@ -18,7 +18,7 @@ $datas = getCurrentGelombang($_GET['edit']);
   <?php if (isset($_GET['success'])) { ?>
             
       <div class="alert alert-success alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://anonymous/project_blk/admin/kejuruan'">&times;</span></button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='<?= $url ?>admin/kejuruan'">&times;</span></button>
         <?= $_GET['success'] ?>
       </div>
 
@@ -27,13 +27,13 @@ $datas = getCurrentGelombang($_GET['edit']);
     <?php if (isset($_GET['err'])) { ?>
             
       <div class="alert alert-danger alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://anonymous/project_blk/admin/kejuruan'">&times;</span></button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='<?= $url ?>admin/kejuruan'">&times;</span></button>
         <?= $_GET['err'] ?>
       </div>
 
     <?php } ?>
 
-  <form action="./config/editGelombangProses.php" method="POST">
+  <form action="<?= $url ?>admin/config/editGelombangProses.php" method="POST">
     
   <div class="form-group">
     <label>Nama Kejuruan</label>

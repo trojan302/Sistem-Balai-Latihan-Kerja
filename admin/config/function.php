@@ -2,9 +2,8 @@
 
 require './config/conn.php';
 
-define('URL', 'http://anonymous/project_blk/admin/');
-$url = "http://anonymous/project_blk/";
-$icon = "http://anonymous/project_blk/libs/photos/icon_blk.png";
+$url = "http://localhost/project_blk/";
+$icon = "http://localhost/project_blk/libs/photos/icon_blk.png";
 
 function maxKuota($id){
 
@@ -440,6 +439,66 @@ function jumlahTerdaftar(){
 	$result = mysql_num_rows($query);
 
 	return $result;
+
+}
+
+function rowStaf(){
+	$sql = "SELECT * FROM staf_blk";
+	$query = mysql_query($sql);
+	$result = mysql_num_rows($query);
+
+	return $result;
+}
+
+function kejuruanData(){
+
+	$sql = "SELECT id_kejuruan, nama_kejuruan FROM kejuruan ORDER BY nama_kejuruan";
+	$query = mysql_query($sql);
+	$data = array();
+	while ($result = mysql_fetch_assoc($query)) {
+		$data[] = $result;
+	}
+
+	return $data;
+
+}
+
+function getStaf(){
+
+	$sql = "SELECT * FROM staf_blk ORDER BY nama";
+	$query = mysql_query($sql);
+	$data = array();
+	while ($result = mysql_fetch_assoc($query)) {
+		$data[] = $result;
+	}
+
+	return $data;
+
+}
+
+function getStafByID($id){
+
+	$sql = "SELECT * FROM staf_blk WHERE stafID='$id'";
+	$query = mysql_query($sql);
+	$data = array();
+	while ($result = mysql_fetch_assoc($query)) {
+		$data[] = $result;
+	}
+
+	return $data;
+
+}
+
+function getStafKejuruanByID($id){
+
+	$sql = "SELECT * FROM staf_blk WHERE stafID='$id'";
+	$query = mysql_query($sql);
+	$data = array();
+	while ($result = mysql_fetch_assoc($query)) {
+		$data[] = $result;
+	}
+
+	return $data;
 
 }
 

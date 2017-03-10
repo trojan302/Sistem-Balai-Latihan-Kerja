@@ -8,11 +8,9 @@
     <meta name="author" content="">
 
     <title>Balai Latihan Kerja | PEMKAB Magelang</title>
-    <link rel="icon" href="<?= $icon; ?>">
-
-    <!-- Bootstrap core CSS -->
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
+    <link rel="icon" href="http://localhost/project_blk/libs/photos/icon_blk.png">
+    <link href="http://localhost/project_blk/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost/project_blk/libs/fonts/css/font-awesome.min.css">
     <link href="./libs/style.css" rel="stylesheet">
   </head>
   <body>

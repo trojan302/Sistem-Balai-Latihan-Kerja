@@ -15,7 +15,7 @@
             </div>
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
               <div class="panel-body">
-                <form action="./config/prosesUpload.php" enctype="multipart/form-data" method="post">
+                <form action="<?= $url ?>admin/config/prosesUpload.php" enctype="multipart/form-data" method="post">
                     <div class="form-group">
                       <div class="input-group">
                         <div class="input-group-addon">Judul</div>
@@ -52,7 +52,7 @@
             </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
               <div class="panel-body">
-                <form action="./config/prosesUpload.php" enctype="multipart/form-data" method="post">
+                <form action="<?= $url ?>admin/config/prosesUpload.php" enctype="multipart/form-data" method="post">
                     
                     <div class="form-group">
                       <div class="input-group">
@@ -90,7 +90,7 @@
             </div>
             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
               <div class="panel-body">
-                <form action="./config/prosesUpload.php" enctype="multipart/form-data" method="post">
+                <form action="<?= $url ?>admin/config/prosesUpload.php" enctype="multipart/form-data" method="post">
                     <div class="form-group">
                       <div class="input-group">
                         <div class="input-group-addon">Judul</div>
@@ -134,7 +134,7 @@
             </ol>
             <div class="carousel-inner" role="listbox">
               <div class="item active">
-                <img class="first-slide" src="./libs/photos/<?= $slide1['filename']; ?>" alt="First slide">
+                <img class="first-slide" src="<?= $url ?>admin/libs/photos/<?= $slide1['filename']; ?>" alt="First slide">
                 <div class="container">
                   <div class="carousel-caption">
                     <h1><?= $slide1['judulSlides'] ?></h1>
@@ -143,7 +143,7 @@
                 </div>
               </div>
               <div class="item">
-                <img class="second-slide" src="./libs/photos/<?= $slide2['filename']; ?>" alt="Second slide">
+                <img class="second-slide" src="<?= $url ?>admin/libs/photos/<?= $slide2['filename']; ?>" alt="Second slide">
                 <div class="container">
                   <div class="carousel-caption">
                     <h1><?= $slide2['judulSlides']; ?></h1>
@@ -152,7 +152,7 @@
                 </div>
               </div>
               <div class="item">
-                <img class="third-slide" src="./libs/photos/<?= $slide3['filename']; ?>" alt="Third slide">
+                <img class="third-slide" src="<?= $url ?>admin/libs/photos/<?= $slide3['filename']; ?>" alt="Third slide">
                 <div class="container">
                   <div class="carousel-caption">
                     <h1><?= $slide3['judulSlides']; ?></h1>
@@ -176,7 +176,7 @@
           <?php if (isset($_GET['err'])) { ?>
             
             <div class="alert alert-danger alert-dismissible" role="alert">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://anonymous/project_blk/admin/homepage'">&times;</span></button>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://localhost/project_blk/admin/homepage'">&times;</span></button>
               <?= $_GET['err'] ?>
             </div>
 
@@ -185,7 +185,7 @@
           <?php if (isset($_GET['success'])) { ?>
             
             <div class="alert alert-success alert-dismissible" role="alert">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://anonymous/project_blk/admin/homepage'">&times;</span></button>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://localhost/project_blk/admin/homepage'">&times;</span></button>
               <?= $_GET['success'] ?>
             </div>
 

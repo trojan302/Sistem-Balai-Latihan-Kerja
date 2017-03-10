@@ -33,7 +33,7 @@
               <a href="?edit=<?= $currFeatures['idFeatures'] ?>" class="btn btn-success btn-xs pull-right">Edit</a>
               </div>
               <div class="panel-body">
-                <img src="./libs/photos/<?= $currFeatures['images'] ?>" alt="Images Features" class="img-thumbnail pull-left" style="width: 20%;margin:5px;">
+                <img src="<?= $url ?>admin/libs/photos/<?= $currFeatures['images'] ?>" alt="Images Features" class="img-thumbnail pull-left" style="width: 20%;margin:5px;">
                 <p style="text-indent:50px;" class="text-justify"><?= $currFeatures['deskFeature'] ?></p>
                 <div class="clearfix"></div>
               </div>
@@ -49,7 +49,7 @@
               <a href="?edit=<?= $currFeatures['idFeatures'] ?>" class="btn btn-success btn-xs pull-right">Edit</a>
               </div>
               <div class="panel-body">
-                <img src="./libs/photos/<?= $currFeatures['images'] ?>" alt="Images Features" class="img-thumbnail pull-left" style="width: 20%;margin:5px;">
+                <img src="<?= $url ?>admin/libs/photos/<?= $currFeatures['images'] ?>" alt="Images Features" class="img-thumbnail pull-left" style="width: 20%;margin:5px;">
                 <p style="text-indent:50px;" class="text-justify"><?= $currFeatures['deskFeature'] ?></p>
                 <div class="clearfix"></div>
               </div>

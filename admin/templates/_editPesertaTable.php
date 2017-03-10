@@ -1,7 +1,7 @@
 <?php 
 
 if (!isset($_GET['edit'])) {
-	header('Location: http://anonymous/project_blk/admin/peserta');
+	header('Location: <?= $url ?>admin/peserta');
 }
 
 $edit = getCurrentPeserta($_GET['edit']);
@@ -13,13 +13,13 @@ $edit = getCurrentPeserta($_GET['edit']);
 <div class="well" style="background-color:skyblue;color:white;">
 	<h2><i class="glyphicon glyphicon-user"></i> Total Users (<?= usersTotal(); ?>)</h2>
 </div>
-<a href="http://anonymous/project_blk/admin/peserta"><i class="glyphicon glyphicon-arrow-left"></i> Back</a>
+<a href="<?= $url ?>admin/peserta"><i class="glyphicon glyphicon-arrow-left"></i> Back</a>
 <hr>
 
 	<?php if (isset($_GET['success'])) { ?>
             
       <div class="alert alert-success alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://anonymous/project_blk/admin/peserta'">&times;</span></button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='<?= $url ?>admin/peserta'">&times;</span></button>
         <?= $_GET['success'] ?>
       </div>
 
@@ -28,14 +28,14 @@ $edit = getCurrentPeserta($_GET['edit']);
     <?php if (isset($_GET['err'])) { ?>
             
       <div class="alert alert-danger alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://anonymous/project_blk/admin/peserta'">&times;</span></button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='<?= $url ?>admin/peserta'">&times;</span></button>
         <?= $_GET['err'] ?>
       </div>
 
     <?php } ?>
 
 	<div class="row">
-		<form action="./config/editPesertaProses.php" method="POST">
+		<form action="<?= $url ?>admin/config/editPesertaProses.php" method="POST">
 		<div class="col-md-6 col-sm-6 col-xs-12">
 			  <div class="form-group">
 			    <label>Nama Lengkap</label>

@@ -6,13 +6,8 @@
         &middot; <a href="#">Terms</a></p>
       </footer>
 
-    </div><!-- /.container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://anonymous/libs/jquery.js"></script>
+    </div>
+    <script src="node_modules/jquery.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     
   </body>

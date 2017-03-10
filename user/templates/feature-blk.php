@@ -10,7 +10,7 @@
           <p class="lead"><?= $data['deskFeature'] ?></p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block img-thumbnail" src="./libs/photos/<?= $data['images'] ?>">
+          <img class="featurette-image img-responsive center-block img-thumbnail" src="http://localhost/project_blk/libs/photos/<?= $data['images'] ?>">
         </div>
       </div>
 

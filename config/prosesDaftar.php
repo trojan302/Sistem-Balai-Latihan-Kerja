@@ -8,16 +8,6 @@ define('DBMS', 'project_blk');
 mysql_connect(HOST,USER,PASS)or die('Server not connected!');
 mysql_select_db(DBMS)or die('Database not selected!');
 
-function authDaftar($nama, $tanggalDaftar){
-
-      $sqlCheck = "SELECT * FROM `peserta` WHERE tanggalDaftar='$tanggalDaftar' AND nama='$nama'";
-      $queryRes = mysql_query($sqlCheck);
-      $rows = mysql_num_rows($queryRes);
-
-      return $rows;
-
-}
-
 if (isset($_REQUEST['daftar'])) {
 	
 	$nama 				= $_REQUEST['nama'];
@@ -38,34 +28,31 @@ if (isset($_REQUEST['daftar'])) {
 	$statusPeserta		= 0;
 	$tanggalDaftar      = date('Y-m-d');
 
-	$sqlCheck = "SELECT nama, tanggalDaftar FROM peserta WHERE nama='$nama'";
+	$tahunDaftar 		= date('Y');
+
+	$sqlCheck = "SELECT nama, nik, DATE_FORMAT(tanggalDaftar, '%Y') AS Mendaftar FROM peserta WHERE nama='$nama' OR (nama LIKE '%$nama%');";
 	$queryRes = mysql_query($sqlCheck);
 	$rows = mysql_num_rows($queryRes);
+	$result = mysql_fetch_assoc($queryRes);
 
-	var_dump($nama);
+	if ($nama == $result['nama'] || $nik == $result['nik'] || $tahunDaftar == $result['Mendaftar']) {
 
-	if ($rows > 0) {
-		$result = mysql_fetch_assoc($queryRes);
-		echo "Data sudah ada";
+		$error = "Pendaftaran Gagal! Peserta dengan nama : ".$result['nama'].", $nama, etc sudah mendaftar pada : $tanggalDaftar.";
+		header('Location: ../pendaftaran.php?err='. urlencode($error));
+
 	}else{
-		echo "data belum ada";
-	}
-
-	// if ($rows > 0) {
-	// 	header('Location: ../pendaftaran.php?err='. urlencode('Pendaftaran Gagal! Peserta sudah terdaftar.'));
-	// }else{
 		
-	// 	$query = "INSERT INTO `peserta`(`id_peserta`, `nama`, `id_kejuruan`, `nik`, `ttl`, `jk`, `id_agama`, `skawin`, `id_pendidikan`, `alamat`, `telp`, `p_kursus`, `p_kerja`, `nama_ortu`, `pk_ortu`, `alamat_ortu`, `tanggalDaftar`, `status_peserta`) VALUES ('','$nama','$kejuruan','$nik','$ttl','$jenis_kelamin','$agama','$skawin','$pendidikan','$alamat','$telepon','$pkursus','$pkerja','$namaOrtu','$pkOrtu','$alamatOrtu','$tanggalDaftar','$statusPeserta')";
+			$query = "INSERT INTO `peserta`(`id_peserta`, `nama`, `id_kejuruan`, `nik`, `ttl`, `jk`, `id_agama`, `skawin`, `id_pendidikan`, `alamat`, `telp`, `p_kursus`, `p_kerja`, `nama_ortu`, `pk_ortu`, `alamat_ortu`, `tanggalDaftar`, `status_peserta`) VALUES ('','$nama','$kejuruan','$nik','$ttl','$jenis_kelamin','$agama','$skawin','$pendidikan','$alamat','$telepon','$pkursus','$pkerja','$namaOrtu','$pkOrtu','$alamatOrtu','$tanggalDaftar','$statusPeserta')";
 
-	// 	$sql = mysql_query($query);
+			$sql = mysql_query($query);
 
-	// 	if ($sql) {
-	// 		header('Location: ../pendaftaran.php?success='. urlencode('Registration Successfully...'));
-	// 	} else {
-	// 		header('Location: ../pendaftaran.php?err='. urlencode('Registration falilure!!!'));
-	// 	}
+			if ($sql) {
+				header('Location: ../pendaftaran.php?success='. urlencode('Registration Successfully...'));
+			} else {
+				header('Location: ../pendaftaran.php?err='. urlencode('Registration falilure!!!'));
+			}
 
-	// }
+	}
 
 }
 

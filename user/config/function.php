@@ -234,5 +234,15 @@ function __generatorID($id_kejuruan){
 
 }
 
+function getGelombang($id_kejuruan){
+
+	$query = "SELECT * FROM gelombang WHERE idKejuruan='$id_kejuruan'";
+	$sql = mysql_query($query);
+	$result = mysql_fetch_assoc($sql);
+
+	return $result;
+
+}
+
 
 ?>

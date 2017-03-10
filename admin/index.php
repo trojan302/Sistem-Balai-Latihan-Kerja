@@ -14,12 +14,6 @@ $pesertaTotal = pesertaTotal();
 $jumlahMendaftar = jumlahMendaftar();
 $jumlahTerdaftar = jumlahTerdaftar();
 
-$data = array(
-	"kejuruan" => array("Operator Komputer","Menjahit","Teknik Pendingin","Prosessing Boga","Mesin Produksi","Las Listrik","Administrasi Kantor","Teknisi Handphone","Mobil Bensin","Sepeda Motor","Sablon","Meubelair"),
-	"minat" => array(211,112,110,87,99,672,122,87,192,100,75,114)
-);
-$no=1;
-
 /* Cons Required! */
 require './templates/_header.php';
 require './templates/_sidebar.php';

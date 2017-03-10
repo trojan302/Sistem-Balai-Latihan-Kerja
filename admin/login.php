@@ -8,11 +8,11 @@
     <title>Login Admin</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" href="http://anonymous/project_blk/libs/photos/icon_blk.png">
+    <link href="<?= $url ?>node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="<?= $icon ?>">
 
     <!-- Custom styles for this template -->
-    <link href="./libs/signin.css" rel="stylesheet">
+    <link href="<?= $url ?>admin/libs/signin.css" rel="stylesheet">
 
   </head>
 
@@ -23,13 +23,13 @@
       <?php if (isset($_GET['err'])) { ?>
             
         <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://anonymous/project_blk/admin/login'">&times;</span></button>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='<?= $url ?>admin/login'">&times;</span></button>
           <?= $_GET['err'] ?>
         </div>
 
       <?php } ?>
 
-      <form class="form-signin" action="prosesLogin.php" method="POST">
+      <form class="form-signin" action="<?= $url ?>admin/prosesLogin.php" method="POST">
         <h2 class="form-signin-heading">Login As Admin</h2>
         <label class="sr-only">Email address</label>
         <input type="email" class="form-control" name="email" placeholder="Email address" required autofocus>

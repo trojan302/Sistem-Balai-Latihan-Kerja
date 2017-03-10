@@ -5,14 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Website Balai Latihan Kerja Pemkab Magelang, Didedikasikan untuk memudahkan masyarakat mengakses informasi dari Balai Latihan Kerja Pemkab Magelang">
-    <meta name="author" content="">
+    <meta name="author" content="Betta Dev Indonesia | Github : @trojan302 | Fanspage : @bettadevindonesia">
 
     <title>Balai Latihan Kerja | PEMKAB Magelang</title>
-    <link rel="icon" href="<?= $icon ?>">
-
-    <!-- Bootstrap core CSS -->
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
+    <link rel="icon" href="http://localhost/project_blk/libs/photos/icon_blk.png">
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./libs/fonts/css/font-awesome.min.css">
     <link href="./libs/style.css" rel="stylesheet">
   </head>
   <body>
@@ -51,6 +49,9 @@
                     </li>
                     <li>
                       <a href="./pendaftaran"><i class="glyphicon glyphicon-file"></i>&nbsp; Pendaftaran</a>
+                    </li>
+                    <li>
+                      <a href="./loginStaf"><i class="glyphicon glyphicon-info-sign"></i>&nbsp; Login Staf</a>
                     </li>
                     <li>
                       <a href="./login"><i class="glyphicon glyphicon-ok-sign"></i>&nbsp; Login</a>
