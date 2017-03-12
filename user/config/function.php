@@ -2,8 +2,8 @@
 
 require './config/conn.php';
 
-$url = "http://anonymous/project_blk/";
-$icon = "http://anonymous/project_blk/user/libs/photos/icon_blk.png";
+$url = "http://localhost/project_blk/";
+$icon = "http://localhost/project_blk/user/libs/photos/icon_blk.png";
 
 function maxKuota($id){
 
@@ -244,5 +244,111 @@ function getGelombang($id_kejuruan){
 
 }
 
+
+function imageMateri($id_kejuruan){
+
+	$image='';
+
+	if (namaKejuruan($id_kejuruan) == 'Operator Komputer') {
+
+		$image .= '../libs/materi-image/operator-komputer.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Mesin Produksi') {
+
+		$image .= '../libs/materi-image/mesin-produksi.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Las Listrik') {
+
+		$image .= '../libs/materi-image/las-listrik.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Teknisi Handphone') {
+
+		$image .= '../libs/materi-image/teknisi-handphone.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Mobil Bensin') {
+
+		$image .= '../libs/materi-image/mobil-bensin.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Administrasi Kantor') {
+
+		$image .= '../libs/materi-image/administrasi-kantor.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Sepeda Motor') {
+
+		$image .= '../libs/materi-image/sepeda-motor.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Sablon') {
+
+		$image .= '../libs/materi-image/sablon.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Meubelair') {
+
+		$image .= '../libs/materi-image/mebel.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Processing (Boga)') {
+
+		$image .= '../libs/materi-image/processing-boga.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Teknik Pendingin') {
+
+		$image .= '../libs/materi-image/teknik-pendingin.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Menjahit') {
+
+		$image .= '../libs/materi-image/menjahit.jpg';
+		
+	}else{
+		return false;
+	}
+
+	return $image;
+
+}
+
+function base64_encode_image ($imagefile) {
+
+    $imgtype = array('jpg', 'gif', 'png');
+    $filename = file_exists($imagefile) ? htmlentities($imagefile) : die('Image file name does not exist');
+    $filetype = pathinfo($filename, PATHINFO_EXTENSION);
+    if (in_array($filetype, $imgtype)){
+        $imgbinary = fread(fopen($filename, "r"), filesize($filename));
+    } else {
+        die ('Invalid image type, jpg, gif, and png is only allowed');
+    }
+    return 'data:image/' . $filetype . ';base64,' . base64_encode($imgbinary);
+}
+
+function daftarMateri(){
+
+	$sql = "SELECT materi.judulMateri AS Materi, materi.materiID AS ID_MATERI, materi.deskripsi AS Deskripsi, materi.fileMateri AS FileMateri, materi.extension AS EXTENSION, staf_blk.nama AS NamaStaf, staf_blk.id_kejuruan AS StafKejuruan, materi.uploaded AS Upload FROM materi INNER JOIN staf_blk ON materi.stafID = staf_blk.stafID ORDER BY materi.materiID DESC";
+	$query = mysql_query($sql);
+	$data = array();
+	while ($result = mysql_fetch_assoc($query)) {
+		$data[] = $result;
+	}
+
+	$list = array();
+
+	foreach ($data as $materiImage) {
+		
+		$list[] = array(
+			"idMateri" => $materiImage['ID_MATERI'],
+			"judulMateri" => $materiImage['Materi'],
+			"deskripsi" => $materiImage['Deskripsi'],
+			"fileMateri" => $materiImage['FileMateri'],
+			"stafNama" => $materiImage['NamaStaf'],
+			"extension" => $materiImage['EXTENSION'],
+			"kejuruan" => namaKejuruan($materiImage['StafKejuruan']),
+			"upload" => $materiImage['Upload'],
+			"imageMateri" => base64_encode_image(imageMateri($materiImage['StafKejuruan']))
+		);
+
+	}
+
+	return $list;
+
+
+
+}
 
 ?>

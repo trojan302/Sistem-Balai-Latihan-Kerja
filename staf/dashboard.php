@@ -33,6 +33,10 @@ if (isset($_GET['profile'])) {
 				
 	require './templates/_editMateri.php';
 
+}else if (isset($_GET['list_peserta']) && isset($_GET['staf_kejuruan'])) {
+				
+	require './templates/_listPeserta.php';
+
 }else{
 
 	require './templates/dashboard-container.php';

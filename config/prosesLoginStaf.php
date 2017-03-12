@@ -3,8 +3,6 @@ session_start();
 require './conn.php';
 
 if (isset($_POST['loginStaf'])) {
-
-	// var_dump($_POST);
 	
 	$usernameOrEmail = $_POST['usernameOrEmail'];
 	$password = $_POST['password'];
