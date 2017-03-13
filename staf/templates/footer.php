@@ -65,7 +65,7 @@
 
           $('#btn-print').on('click',function(){
           printData();
-          })
+          });
       } );
     </script>
   </body>

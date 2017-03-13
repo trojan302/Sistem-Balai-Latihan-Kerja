@@ -142,8 +142,47 @@ $lihat = getCurrentPeserta($_GET['lihat']);
 			</td>
 		</tr>
 
+		<tr>
+			<th>File Ijazah &amp; KTP</th>
+			<td>: <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modalIjazah">
+			  <i class="glyphicon glyphicon-picture"></i> Ijazah
+			</button> &nbsp; <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modalKtp">
+			  <i class="glyphicon glyphicon-picture"></i> KTP
+			</button></td>
+		</tr>
+
 	<?php } ?>
 	</table>
 
 </div>
+</div>
+
+
+<div class="modal fade" id="modalIjazah" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Ijazah <?= $peserta['nama'] ?></h4>
+      </div>
+      <div class="modal-body">
+        <img src="<?= $peserta['ijazah'] ?>" alt="" class="img-responsive">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalKtp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">KTP <?= $peserta['nama'] ?></h4>
+      </div>
+      <div class="modal-body">
+        <img src="<?= $peserta['ktp'] ?>" alt="" class="img-responsive">
+      </div>
+    </div>
+  </div>
 </div>

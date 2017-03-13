@@ -6,6 +6,9 @@ $staf = getStafByID($_SESSION['stafID']);
 $lokers = getAllLoker();
 $kejuruan = getAllKejuruan();
 $listmateri = getAllList($_SESSION['stafID']);
+$getPesertaByKejuruan = getPesertaByKejuruan();
+$getStafByKejuruan = getStafByKejuruan();
+$getPesertaByStaf = getPesertaByStaf();
 
 if (!isset($_SESSION['stafID'])) {
 	header('Location: ../index');
@@ -37,7 +40,15 @@ if (isset($_GET['profile'])) {
 				
 	require './templates/_listPeserta.php';
 
-}else if (isset($_GET['list_peserta']) && isset($_GET['list_istruktur'])) {
+}else if (isset($_GET['list_peserta']) && isset($_GET['tampil_peserta']) == 'true') {
+				
+	require './templates/_semuaListPeserta.php';
+
+}else if (isset($_GET['list_instruktur']) && isset($_GET['tampil_instruktur']) == 'true') {
+				
+	require './templates/_semuaListInstruktur.php';
+
+}else if (isset($_GET['list_semua']) && isset($_GET['tampil_semua']) == 'true') {
 				
 	require './templates/_semuaList.php';
 

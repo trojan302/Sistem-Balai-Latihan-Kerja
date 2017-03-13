@@ -49,10 +49,10 @@ $sql = mysql_query($query);
 
 if ($sql) {
 
-	header('Location: http://anonymous/project_blk/admin/peserta?edit='.$id_peserta.'&success='.urlencode('Data berhasil diupdate!'));
+	header('Location: http://localhost/project_blk/admin/peserta?edit='.$id_peserta.'&success='.urlencode('Data berhasil diupdate!'));
 
 }else{
-	header('Location: http://anonymous/project_blk/admin/peserta?edit='.$id_peserta.'&err='.urlencode('Data gagal diupdate!'));
+	header('Location: http://localhost/project_blk/admin/peserta?edit='.$id_peserta.'&err='.urlencode('Data gagal diupdate!'));
 }
 
 ?>

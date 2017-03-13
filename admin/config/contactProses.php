@@ -14,11 +14,11 @@ $sql = mysql_query($query);
 
 if ($sql) {
 	
-	header('Location: http://anonymous/project_blk/admin/contactpage?success='. urlencode('Halaman Kontak Berhasil Diupdate!!'));
+	header('Location: http://localhost/project_blk/admin/contactpage?success='. urlencode('Halaman Kontak Berhasil Diupdate!!'));
 
 }else{
 
-	header('Location: http://anonymous/project_blk/admin/contactpage?err='. urlencode('Halaman Kontak Gagal Diupdate!!'));
+	header('Location: http://localhost/project_blk/admin/contactpage?err='. urlencode('Halaman Kontak Gagal Diupdate!!'));
 
 }
 

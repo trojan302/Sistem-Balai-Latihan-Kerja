@@ -5,7 +5,7 @@ require './conn.php';
 $id = $_GET['user'];
 
 if (!isset($id)) {
-	header('Location: http://anonymous/project_blk/admin/peserta');
+	header('Location: http://localhost/project_blk/admin/peserta');
 }
 
 function generatorUsers($id){
@@ -22,11 +22,13 @@ function generatorUsers($id){
 	$uniq = str_replace("-", "", $tanggalDaftar);
 	$username = $exname[0]."ID-".$uniq;
 	$password = md5($username);
+	$passnohash = $username;
 	$date = date('Y-m-d');
 
 	$data = array(
 		'id_peserta' => $id_peserta,
 		'username' => $username,
+		'passnohash' => $passnohash,
 		'password' => $password,
 		'created' => date('Y-m-d')
 	);
@@ -36,15 +38,15 @@ function generatorUsers($id){
 }
 
 $data = generatorUsers($id);
-echo "<pre>",print_r($data),"</pre>";
+// echo "<pre>",print_r($data),"</pre>";
 
-$query = "INSERT INTO`users`(`idUser`,`id_peserta`,`username`,`password`,`created`)VALUES('','".$data['id_peserta']."','".$data['username']."','".$data['password']."','".$data['created']."')";
+$query = "INSERT INTO`users`(`idUser`,`id_peserta`,`username`,`password`,`created`)VALUES('','".$data['id_peserta']."','".$data['username']."','".$data['password']."','".$passnohash."','".$data['created']."')";
 $sql = mysql_query($query);
 
 if ($sql) {
-	header('Location: http://anonymous/project_blk/admin/peserta');
+	header('Location: http://localhost/project_blk/admin/peserta');
 }else{
-	header('Location: http://anonymous/project_blk/admin/peserta');
+	header('Location: http://localhost/project_blk/admin/peserta');
 }
 
 

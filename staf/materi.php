@@ -3,6 +3,7 @@ session_start();
 require './config/function.php';
 
 $staf = getStafByID($_SESSION['stafID']);
+$materi = daftarMateri();
 
 if (!isset($_SESSION['stafID'])) {
 	header('Location: ../index');

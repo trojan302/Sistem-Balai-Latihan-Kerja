@@ -68,30 +68,11 @@ $gelobangDitutup = strtotime('+2 weeks', $gelobangDibuka);
 					<td style="width:65%;">: <?= $peserta['alamat'] ?></td>
 		    	</tr>
 		    	<tr>
-		    		<th style="width:35%;">Wktu Ujian</th>
+		    		<th style="width:35%;">Waktu Ujian</th>
 					<td style="width:65%;">: <?= $dayList[$day]; ?></td>
 		    	</tr>
 		    </table>
 		    <br>
-		    <p style="text-indent:50px;">Berikut ini adalah bukti bahwa yang bertanda tangan dibawah ini telah mendaftarkan diri di Balai Latihan Kerja sebagai peserta pelatihan : </p>
-		    <table class="table-condensed" style="width:75%;margin:auto;">
-		    	<tr>
-		    		<th>Nama</th>
-		    		<td>: <?= $peserta['nama'] ?></td>
-		    	</tr>
-		    	<tr>
-		    		<th>Tempat, Tanggal Lahir</th>
-		    		<td>: <?= $peserta['ttl'] ?></td>
-		    	</tr>
-		    	<tr>
-		    		<th>Alamat</th>
-		    		<td>: <?= $peserta['alamat'] ?></td>
-		    	</tr>
-		    	<tr>
-		    		<th>Pendidikan</th>
-		    		<td>: <?= pendidikan($peserta['id_pendidikan']) ?></td>
-		    	</tr>
-		    </table>
 		    <br><br>
 		    <span class="pull-right text-center">
 		    <b>Tertanda</b>

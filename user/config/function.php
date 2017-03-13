@@ -226,7 +226,7 @@ function pendidikan($id_pendidikan){
 
 function __generatorID($id_kejuruan){
 
-      $sql = "SELECT CONCAT(LEFT(kejuruan.nama_kejuruan, 2),'-',DATE_FORMAT(peserta.tanggalDaftar, '%Y-%d'),peserta.id_peserta) AS ID_DAFTAR FROM kejuruan INNER JOIN peserta ON kejuruan.id_kejuruan = peserta.id_peserta WHERE kejuruan.id_kejuruan='$id_kejuruan'";
+      $sql = "SELECT CONCAT(LEFT(kejuruan.nama_kejuruan, 2),'-',DATE_FORMAT(peserta.tanggalDaftar, '%Y-%d'),peserta.id_peserta) AS ID_DAFTAR FROM kejuruan INNER JOIN peserta ON kejuruan.id_kejuruan = peserta.id_kejuruan WHERE kejuruan.id_kejuruan='$id_kejuruan'";
       $query = mysql_query($sql);
       $result = mysql_fetch_assoc($query);
 

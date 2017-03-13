@@ -104,7 +104,7 @@ function deleteUser($id) {
 
 	if ($sql) {
 		
-		header('Location: http://anonymous/project_blk/admin/users');
+		header('Location: http://localhost/project_blk/admin/users');
 
 	}
 
@@ -500,6 +500,268 @@ function getStafKejuruanByID($id){
 
 	return $data;
 
+}
+
+function deletePeserta($id_peserta){
+
+	$query = "DELETE FROM peserta WHERE id_peserta = '$id_peserta'";
+	$sql = mysql_query($query);
+	$query2 = "DELETE FROM users WHERE id_peserta = '$id_peserta'";
+	$sql2 = mysql_query($query2);
+
+	if ($sql && sql2) {
+		
+		header('Location: http://localhost/project_blk/admin/peserta');
+
+	}
+
+}
+
+function deleteStaf($stafID){
+
+	$query = "DELETE FROM staf_blk WHERE stafID = '$stafID'";
+	$sql = mysql_query($query);
+
+	if ($sql) {
+		
+		header('Location: http://localhost/project_blk/admin/staf');
+
+	}
+
+}
+
+function namaKejuruan($id_kejuruan){
+
+	$sql = "SELECT nama_kejuruan FROM kejuruan WHERE id_kejuruan='$id_kejuruan'";
+	$query = mysql_query($sql);
+	$result = mysql_fetch_assoc($query);
+
+	return $result['nama_kejuruan'];
+
+}
+
+function imageMateri($id_kejuruan){
+
+	$image='';
+
+	if (namaKejuruan($id_kejuruan) == 'Operator Komputer') {
+
+		$image .= '../libs/materi-image/operator-komputer.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Mesin Produksi') {
+
+		$image .= '../libs/materi-image/mesin-produksi.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Las Listrik') {
+
+		$image .= '../libs/materi-image/las-listrik.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Teknisi Handphone') {
+
+		$image .= '../libs/materi-image/teknisi-handphone.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Mobil Bensin') {
+
+		$image .= '../libs/materi-image/mobil-bensin.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Administrasi Kantor') {
+
+		$image .= '../libs/materi-image/administrasi-kantor.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Sepeda Motor') {
+
+		$image .= '../libs/materi-image/sepeda-motor.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Sablon') {
+
+		$image .= '../libs/materi-image/sablon.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Meubelair') {
+
+		$image .= '../libs/materi-image/mebel.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Processing (Boga)') {
+
+		$image .= '../libs/materi-image/processing-boga.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Teknik Pendingin') {
+
+		$image .= '../libs/materi-image/teknik-pendingin.jpg';
+		
+	}elseif (namaKejuruan($id_kejuruan) == 'Menjahit') {
+
+		$image .= '../libs/materi-image/menjahit.jpg';
+		
+	}else{
+		return false;
+	}
+
+	return $image;
+
+}
+
+function base64_encode_image ($imagefile) {
+
+    $imgtype = array('jpg', 'gif', 'png');
+    $filename = file_exists($imagefile) ? htmlentities($imagefile) : die('Image file name does not exist');
+    $filetype = pathinfo($filename, PATHINFO_EXTENSION);
+    if (in_array($filetype, $imgtype)){
+        $imgbinary = fread(fopen($filename, "r"), filesize($filename));
+    } else {
+        die ('Invalid image type, jpg, gif, and png is only allowed');
+    }
+    return 'data:image/' . $filetype . ';base64,' . base64_encode($imgbinary);
+}
+
+function daftarMateri(){
+
+	$sql = "SELECT materi.judulMateri AS Materi, materi.materiID AS ID_MATERI, materi.deskripsi AS Deskripsi, materi.fileMateri AS FileMateri, materi.extension AS EXTENSION, staf_blk.nama AS NamaStaf, staf_blk.id_kejuruan AS StafKejuruan, materi.uploaded AS Upload FROM materi INNER JOIN staf_blk ON materi.stafID = staf_blk.stafID ORDER BY materi.materiID DESC";
+	$query = mysql_query($sql);
+	$data = array();
+	while ($result = mysql_fetch_assoc($query)) {
+		$data[] = $result;
+	}
+
+	$list = array();
+
+	foreach ($data as $materiImage) {
+		
+		$list[] = array(
+			"idMateri" => $materiImage['ID_MATERI'],
+			"judulMateri" => $materiImage['Materi'],
+			"deskripsi" => $materiImage['Deskripsi'],
+			"fileMateri" => $materiImage['FileMateri'],
+			"stafNama" => $materiImage['NamaStaf'],
+			"extension" => $materiImage['EXTENSION'],
+			"kejuruan" => namaKejuruan($materiImage['StafKejuruan']),
+			"upload" => $materiImage['Upload'],
+			"imageMateri" => base64_encode_image(imageMateri($materiImage['StafKejuruan']))
+		);
+
+	}
+
+	return $list;
+
+}
+
+function listBackup(){
+
+	$sql = "SELECT * FROM db_backup";
+	$query = mysql_query($sql);
+	$data = array();
+	while($result = mysql_fetch_assoc($query)){
+		$data[] = $result;
+	}
+
+	return $data;
+
+}
+
+function Permission($filename){
+
+	$perms = fileperms('database/'.$filename);
+
+	if (($perms & 0xC000) == 0xC000) {
+	    // Socket
+	    $info = 's';
+	} elseif (($perms & 0xA000) == 0xA000) {
+	    // Symbolic Link
+	    $info = 'l';
+	} elseif (($perms & 0x8000) == 0x8000) {
+	    // Regular
+	    $info = '-';
+	} elseif (($perms & 0x6000) == 0x6000) {
+	    // Block special
+	    $info = 'b';
+	} elseif (($perms & 0x4000) == 0x4000) {
+	    // Directory
+	    $info = 'd';
+	} elseif (($perms & 0x2000) == 0x2000) {
+	    // Character special
+	    $info = 'c';
+	} elseif (($perms & 0x1000) == 0x1000) {
+	    // FIFO pipe
+	    $info = 'p';
+	} else {
+	    // Unknown
+	    $info = 'u';
+	}
+
+	// Hanya Ownner
+	$info .= (($perms & 0x0100) ? 'r' : '-');
+	$info .= (($perms & 0x0080) ? 'w' : '-');
+	$info .= (($perms & 0x0040) ?
+	            (($perms & 0x0800) ? 's' : 'x' ) :
+	            (($perms & 0x0800) ? 'S' : '-'));
+
+	// Hanya Group
+	$info .= (($perms & 0x0020) ? 'r' : '-');
+	$info .= (($perms & 0x0010) ? 'w' : '-');
+	$info .= (($perms & 0x0008) ?
+	            (($perms & 0x0400) ? 's' : 'x' ) :
+	            (($perms & 0x0400) ? 'S' : '-'));
+
+	// Semuanya
+	$info .= (($perms & 0x0004) ? 'r' : '-');
+	$info .= (($perms & 0x0002) ? 'w' : '-');
+	$info .= (($perms & 0x0001) ?
+	            (($perms & 0x0200) ? 't' : 'x' ) :
+	            (($perms & 0x0200) ? 'T' : '-'));
+
+	if ($info == 'drw-------') {
+	 return "$info";
+	}else if($info == 'drw-r--r--'){
+	 return "$info";
+	}else if($info == 'drwxr-xr-x'){
+	 return "$info";
+	}else if($info == 'drwxr-x---'){
+	 return "$info";
+	}else{
+	 return "$info";
+	} 
+
+}
+
+function IMPORT_TABLES($host,$user,$pass,$dbname, $file_or_contents){
+
+	set_time_limit(3000);
+
+	$SQL_CONTENT = (strlen($file_or_contents) > 300 ?  $file_or_contents : file_get_contents($file_or_contents)  ); 
+
+	$allLines = explode("\n",$SQL_CONTENT); 
+
+	$mysqli = new mysqli($host, $user, $pass, $dbname); 
+
+	if (mysqli_connect_errno()){
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	} 
+	
+	$zzzzzz = $mysqli->query('SET foreign_key_checks = 0');	        
+	preg_match_all("/\nCREATE TABLE(.*?)\`(.*?)\`/si", "\n". $SQL_CONTENT, $target_tables); 
+
+	foreach ($target_tables[2] as $table){
+		$mysqli->query('DROP TABLE IF EXISTS '.$table);
+	}         
+
+	$zzzzzz = $mysqli->query('SET foreign_key_checks = 1');    
+	$mysqli->query("SET NAMES 'utf8'");	
+
+	$templine = '';	// variabel temporer, untuk membuat query
+
+	foreach ($allLines as $line)	{											// loop setiap baris
+		if (substr($line, 0, 2) != '--' && $line != '') {
+		$templine .= $line; 	// Jika bukan comment, tambahkan ke baris saat ini
+			if (substr(trim($line), -1, 1) == ';') {		// Jika ada (;) semicolon, berarti akhir dari query
+				if(!$mysqli->query($templine)){ 
+					print('Error pembuatan query <pre>' . $templine . '\': ' . $mysqli->error . '</pre><br /><br />');  
+				}  
+
+				$templine = ''; // set variable menjadi kosong lagi untuk mencetak query selanjurnya seetelah (;) semicolon
+			}
+		}
+	}
+
+	return true;
 }
 
 ?>

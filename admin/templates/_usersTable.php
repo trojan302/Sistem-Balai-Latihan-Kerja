@@ -1,11 +1,20 @@
 <div class="row">
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
-<div class="well" style="background-color:skyblue;color:white;">
-	<h2><i class="glyphicon glyphicon-user"></i> Total Users (<?= usersTotal(); ?>)</h2>
-</div>
+<hr>
 
-<table class="table table-hover table-responsive">
+<button id="users-pdf" class="btn btn-danger btn-xs disabled"><i class="glyphicon glyphicon-print"></i> PDF</button>
+<button id="users-png" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-print"></i> PNG</button>
+<button id="users-json" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-print"></i> JSON</button>
+<button id="users-csv" class="btn btn-warning btn-xs"><i class="glyphicon glyphicon-print"></i> CSV</button>
+<button id="users-xml" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-print"></i> XML</button>
+<button id="users-sql" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-print"></i> SQL</button>
+<button id="users-word" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-print"></i> MS Word</button>
+<button id="users-excel" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-print"></i> MS Exel</button>
+
+<hr>
+
+<table id="table-users" class="table table-hover table-responsive">
 	<thead>
 		<tr>
 			<th>#</th>

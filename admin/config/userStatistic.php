@@ -1,8 +1,6 @@
 <?php 
 
-/**
- * @return IP (192.168.1.1)
- */
+
 function ip_user()
 {
     if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
@@ -16,16 +14,13 @@ function ip_user()
     return $ip;
 }
  
-/**
- * @see http://php.net/manual/en/function.get-browser.php;
- * @return 
- */
+
 function browser_user()
 {
     $browser = _userAgent();
     return $browser['name'] . ' v.'.$browser['version'];
 }
-# User Agent
+
 function _userAgent()
 {
     $u_agent    = $_SERVER['HTTP_USER_AGENT']; 
@@ -64,7 +59,7 @@ function _userAgent()
         }
  
     }
-    // Next get the name of the useragent yes seperately and for good reason
+    
     if(preg_match('/MSIE/i',$u_agent) && !preg_match('/Opera/i',$u_agent)) 
     { 
         $bname = 'Internet Explorer'; 
@@ -96,19 +91,18 @@ function _userAgent()
         $ub = "Netscape"; 
     } 
    
-    // finally get the correct version number
+    
     $known = array('Version', $ub, 'other');
     $pattern = '#(?<browser>' . join('|', $known) .
     ')[/ ]+(?<version>[0-9.|a-zA-Z.]*)#';
     if (!preg_match_all($pattern, $u_agent, $matches)) {
-        // we have no matching number just continue
+        
     }
     
-    // see how many we have
+    
     $i = count($matches['browser']);
     if ($i != 1) {
-        //we will have two since we are not using 'other' argument yet
-        //see if version is before or after the name
+
         if (strripos($u_agent,"Version") < strripos($u_agent,$ub)){
             $version= $matches['version'][0];
         }
@@ -120,7 +114,6 @@ function _userAgent()
         $version= $matches['version'][0];
     }
     
-    // check if we have a number
     if ($version==null || $version=="") {$version="?";}
     
     return array(
@@ -132,8 +125,7 @@ function _userAgent()
     );
 }
  
-/**
- * @return name Operating System*/
+
 function os_user()
 {
     $OS = _userAgent();

@@ -2,7 +2,7 @@
         <h1>Pendaftaran Balai Latihan Kerja</h1>
         <hr>
         <div class="row">
-        <form action="<?= $url ?>config/prosesDaftar.php" method="POST">
+        <form action="<?= $url ?>config/prosesDaftar.php" method="POST" enctype="multipart/form-data">
         	<?php if (isset($_GET['err'])) { ?>
 
 	        <div class="alert alert-danger alert-dismissible" role="alert">
@@ -10,15 +10,6 @@
 	          <?php echo $_GET['err']; ?>
 	        </div>
 
-	        <?php } ?>
-
-	        <?php if (isset($_GET['success'])) { ?>
-
-	        <div class="alert alert-success alert-dismissible" role="alert">
-	          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	          <?php echo $_GET['success']; ?> <a href="./login.php" title="Login Page">Try to Login</a>
-	        </div>
-	        
 	        <?php } ?>
 
         	<div class="col-md-6 col-sm-12 col-xs-12">
@@ -65,11 +56,21 @@
 				    <textarea name="alamat" class="form-control" id="" cols="30" rows="5" style="resize:none;" placeholder="Masukkan Alamat Lengkap"></textarea>
 				  </div>
 				  <div class="form-group">
-				    <label>Telepon / HP</label>
-				    <input type="tel" class="form-control" placeholder="Nomor telepon / hp" name="telepon" required>
+				    <label>Upload Fotocopy Ijazah Terakhir</label>
+				    <input type="file" name="ijazah" required>
+				    <p class="help-block">File type JPG, JPEG, PNG, GIF.</p>
+				  </div>
+				  <div class="form-group">
+				    <label>Upload Fotocopy KTP</label>
+				    <input type="file" name="ktp" required>
+				    <p class="help-block">File type JPG, JPEG, PNG, GIF.</p>
 				  </div>
         	</div>
         	<div class="col-md-6 col-sm-12 col-xs-12">
+				<div class="form-group">
+					<label>Telepon / HP</label>
+					<input type="tel" class="form-control" placeholder="Nomor telepon / hp" name="telepon" required>
+				</div>
 				<div class="form-group">
 				    <label>Kejuruan yang Dipilih</label>
 				    <select name="kejuruan" class="form-control" required>

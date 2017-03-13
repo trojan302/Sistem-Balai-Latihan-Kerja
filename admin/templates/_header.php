@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Admin Panel</title>
-    <link href="<?= $url ?>node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost/project_blk/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="<?= $icon ?>">
-    <link rel="stylesheet" href="<?= $url ?>admin/node_modules/main.css">
-    <link rel="stylesheet" href="<?= $url ?>libs/fonts/css/font-awesome.min.css">
-    <link href="<?= $url ?>node_modules/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost/project_blk/admin/node_modules/main.css">
+    <link rel="stylesheet" href="http://localhost/project_blk/libs/fonts/css/font-awesome.min.css">
+    <link href="http://localhost/project_blk/admin/node_modules/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
     <style>
       body{
         overflow-x: hidden;
@@ -30,7 +32,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<?= $url ?>admin/">Admin Panel</a>
+          <a class="navbar-brand" href="http://localhost/project_blk/admin/">Admin Panel</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -38,9 +40,6 @@
             <li><a href="#"><?= $_SESSION['login'] ?></a></li>
             <li><a href="./logout">Logout</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
         </div>
       </div>
     </nav>

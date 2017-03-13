@@ -13,9 +13,9 @@
 		        <hr>
 		        <p><?= $data['deskripsi'] ?></p>
 		        <?php if ($data['extension'] == 'doc' || $data['extension'] == 'docx' || $data['extension'] == 'ppt' || $data['extension'] == 'pptx') { ?>
-		        	<p><a href="download.php?file=<?= base64_encode($data['idMateri']) ?>" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-download-alt"></i> Download</a> <a href="<?= $data['fileMateri'] ?>" target="_blank" class="btn btn-default disabled" role="button"><i class="glyphicon glyphicon-eye-open"></i> Lihat</a></p>
+		        	<p><a href="http://localhost/project_blk/download.php?file=<?= base64_encode($data['idMateri']) ?>" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-download-alt"></i> Download</a> <a href="<?= $data['fileMateri'] ?>" target="_blank" class="btn btn-default disabled" role="button"><i class="glyphicon glyphicon-eye-open"></i> Lihat</a></p>
 		        <?php }else{ ?>
-					<p><a href="download.php?file=<?= base64_encode($data['idMateri']) ?>" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-download-alt"></i> Download</a> <a href="<?= $data['fileMateri'] ?>" target="_blank" class="btn btn-default" role="button"><i class="glyphicon glyphicon-eye-open"></i> Lihat</a></p>
+					<p><a href="http://localhost/project_blk/download.php?file=<?= base64_encode($data['idMateri']) ?>" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-download-alt"></i> Download</a> <a href="<?= $data['fileMateri'] ?>" target="_blank" class="btn btn-default" role="button"><i class="glyphicon glyphicon-eye-open"></i> Lihat</a></p>
 		        <?php } ?>
 		        
 		      </div>
