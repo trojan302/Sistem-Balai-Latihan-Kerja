@@ -21,5 +21,8 @@
 	  <li class="list-group-item">
 	    <a href="?list_semua=<?= urlencode($staf['nama']) ?>&tampil_semua=true"><i class="fa fa-list-ul pull-right"></i> List Semua</a>
 	  </li>
+	  <li class="list-group-item">
+	    <a href="?ganti_password=true">Ganti Password</a>
+	  </li>
 	</ul>
 </div>

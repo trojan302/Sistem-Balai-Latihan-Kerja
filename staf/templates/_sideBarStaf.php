@@ -12,5 +12,8 @@
 	  <li class="list-group-item">
 	    <a href="?list_peserta=<?= urlencode($staf['nama']) ?>&staf_kejuruan=<?= $staf['id_kejuruan'] ?>"><i class="fa fa-list-ol pull-right"></i> List Peserta</a>
 	  </li>
+	  <li class="list-group-item">
+	    <a href="?ganti_password=true">Ganti Password</a>
+	  </li>
 	</ul>
 </div>

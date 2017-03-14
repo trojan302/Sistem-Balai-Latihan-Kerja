@@ -2,6 +2,7 @@
 session_start();
 
 require './config/function.php';
+require './dataBackups.php';
 
 if (!isset($_SESSION['login'])) {
 	

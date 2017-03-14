@@ -386,4 +386,14 @@ function daftarMateri(){
 
 }
 
+function getUsername($stafID){
+
+	$sql = "SELECT username FROM staf_blk WHERE stafID='$stafID'";
+	$query = mysql_query($sql);
+	$result = mysql_fetch_assoc($query);
+
+	return $result['username'];
+
+}
+
 ?>

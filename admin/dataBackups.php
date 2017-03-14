@@ -1,10 +1,5 @@
-<?php 
+<?php
 
-if (!isset($_GET['dhausri'])) {
-	header('Location: http://localhost/project_blk/admin/backups');
-}
-
-require './config/function.php';
 require './config/backupFunction.php';
 
 $listBackup = listBackup();

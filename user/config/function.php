@@ -351,4 +351,15 @@ function daftarMateri(){
 
 }
 
+
+function getUsername($id_peserta){
+
+	$sql = "SELECT username FROM users WHERE id_peserta='$id_peserta'";
+	$query = mysql_query($sql);
+	$result = mysql_fetch_assoc($query);
+
+	return $result['username'];
+
+}
+
 ?>

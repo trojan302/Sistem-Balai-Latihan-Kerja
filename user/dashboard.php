@@ -19,6 +19,10 @@ if (isset($_GET['profile'])) {
 
 	require './templates/dashboard-bukti-container.php';
 
+}else if(isset($_GET['ganti_password'])){
+
+	require './templates/dashboard-ganti-password-container.php';
+
 }else{
 
 	require './templates/dashboard-container.php';

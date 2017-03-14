@@ -40,13 +40,15 @@ function generatorUsers($id){
 $data = generatorUsers($id);
 // echo "<pre>",print_r($data),"</pre>";
 
-$query = "INSERT INTO`users`(`idUser`,`id_peserta`,`username`,`password`,`created`)VALUES('','".$data['id_peserta']."','".$data['username']."','".$data['password']."','".$passnohash."','".$data['created']."')";
+$query = "INSERT INTO`users`(`idUser`,`id_peserta`,`username`,`password`,`passnohash`,`created`) VALUES ('','".$data['id_peserta']."','".$data['username']."','".$data['password']."','".$data['passnohash']."','".$data['created']."')";
 $sql = mysql_query($query);
 
 if ($sql) {
-	header('Location: http://localhost/project_blk/admin/peserta');
+	// header('Location: http://localhost/project_blk/admin/peserta');
+	die($sql);
 }else{
-	header('Location: http://localhost/project_blk/admin/peserta');
+	die($sql);
+	// header('Location: http://localhost/project_blk/admin/peserta');
 }
 
 

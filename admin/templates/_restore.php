@@ -7,7 +7,7 @@
       <?php
       if (isset($_GET['restore']) && isset($_GET['data'])) {
           
-          $import = IMPORT_TABLES('localhost', 'root', '', 'betta', 'http://localhost/project_blk/admin/database/'.$_GET['data']);
+          $import = IMPORT_TABLES('localhost', 'root', '', 'project_blk', 'http://localhost/project_blk/admin/database/'.$_GET['data']);
           
           if ($import == true) {
             echo "<script>window.location.href='http://localhost/project_blk/admin/backups?restore=true'</script>";
@@ -44,7 +44,6 @@
             while (false !== ($filename = readdir($handle))) {
 
                 if ($filename != "." && $filename != "..") {
-                  // echo $entry .' | '. Permission($entry);
         ?>
 
         
@@ -58,6 +57,9 @@
               </a>
               <a href="http://localhost/project_blk/admin/backups?restore=true&data=<?= $filename ?>" class="btn btn-info btn-xs">
                 <i class="glyphicon glyphicon-cloud-upload"></i>
+              </a>
+              <a href="http://localhost/project_blk/admin/database/<?= $filename ?>" class="btn btn-info btn-xs">
+                <i class="glyphicon glyphicon-download-alt"></i>
               </a>
             </td>
           </tr>

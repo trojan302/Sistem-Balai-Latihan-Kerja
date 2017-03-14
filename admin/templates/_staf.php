@@ -9,7 +9,7 @@
         <i class="glyphicon glyphicon-plus"></i> Tambah Staf
       </a>
       
-      <button id="staf-pdf" class="btn btn-danger btn-xs disabled"><i class="glyphicon glyphicon-print"></i> PDF</button>
+      <button id="staf-pdf" class="btn btn-danger btn-xs disabled" disabled><i class="glyphicon glyphicon-print"></i> PDF</button>
       <button id="staf-png" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-print"></i> PNG</button>
       <button id="staf-json" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-print"></i> JSON</button>
       <button id="staf-csv" class="btn btn-warning btn-xs"><i class="glyphicon glyphicon-print"></i> CSV</button>

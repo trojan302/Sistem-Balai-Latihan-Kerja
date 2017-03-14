@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="http://localhost/project_blk/admin/node_modules/main.css">
     <link rel="stylesheet" href="http://localhost/project_blk/libs/fonts/css/font-awesome.min.css">
     <link href="http://localhost/project_blk/admin/node_modules/dashboard.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="http://localhost/project_blk/node_modules/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="http://localhost/project_blk/node_modules/buttons.dataTables.min.css">
     <style>
       body{
         overflow-x: hidden;
