@@ -73,6 +73,7 @@ $username = generatorUsers($_SESSION['daftar'])['username'];
 		
 		<h2>PENTING !!!</h2>
 		<p>Anda Terdaftar sebagai user <code><?= $username; ?></code> dengan password sementara yang sama. Tetapi anda belum bisa login untuk sekarang ini karena menunggu hasil seleksi dari panitia.</p>
+		<p>Silahkan klik <a target="_blank" href="print?print=bukti_daftar&id=<?= $_SESSION['daftar'] ?>" class="btn btn-default"><i class="glyphicon glyphicon-print"></i> Print</a></p>
 		<br><br><br>
 		Terimakasih
 		<br><br><br>

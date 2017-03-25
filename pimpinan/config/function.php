@@ -5,6 +5,36 @@ require './config/conn.php';
 $url = "http://localhost/project_blk/";
 $icon = "http://localhost/project_blk/user/libs/photos/icon_blk.png";
 
+function hitCounter(){
+
+	$sql = "SELECT * FROM counter ORDER BY date_created DESC";
+	$query = mysql_query($sql);
+	$result = mysql_num_rows($query);
+
+	return $result;
+
+}
+
+function jumlahMendaftar(){
+
+	$sql = "SELECT * FROM peserta WHERE status_peserta='0'";
+	$query = mysql_query($sql);
+	$result = mysql_num_rows($query);
+
+	return $result;
+
+}
+
+function jumlahTerdaftar(){
+
+	$sql = "SELECT * FROM peserta WHERE status_peserta!='0'";
+	$query = mysql_query($sql);
+	$result = mysql_num_rows($query);
+
+	return $result;
+
+}
+
 function maxKuota($id){
 
 	$query 	= "SELECT * FROM kejuruan WHERE id_kejuruan = '$id'";
@@ -295,9 +325,9 @@ function getPesertaByKejuruan(){
 
 }
 
-function getStafByKejuruan(){
+function getStafByKejuruan($stafID){
 
-      $sql = "SELECT staf_blk.nama AS STAF_NAMA, kejuruan.nama_kejuruan AS KEJURUAN FROM staf_blk, kejuruan WHERE staf_blk.id_kejuruan = kejuruan.id_kejuruan";
+      $sql = "SELECT staf_blk.nama AS STAF_NAMA, kejuruan.nama_kejuruan AS KEJURUAN FROM staf_blk, kejuruan WHERE staf_blk.id_kejuruan = kejuruan.id_kejuruan AND staf_blk.stafID != '".$stafID."'";
       $query = mysql_query($sql);
       $data = array();
       while ($result = mysql_fetch_assoc($query)) {
@@ -308,9 +338,9 @@ function getStafByKejuruan(){
 
 }
 
-function getPesertaByStaf(){
+function getPesertaByStaf($stafID){
 
-      $sql = "SELECT peserta.nama AS PESERTA, kejuruan.nama_kejuruan AS KEJURUAN, staf_blk.nama AS STAF FROM peserta JOIN kejuruan ON peserta.id_kejuruan = kejuruan.id_kejuruan JOIN staf_blk ON staf_blk.id_kejuruan = kejuruan.id_kejuruan ORDER BY STAF";
+      $sql = "SELECT peserta.nama AS PESERTA, staf_blk.nama AS STAF, kejuruan.nama_kejuruan AS KEJURUAN FROM peserta, staf_blk, kejuruan WHERE peserta.id_kejuruan = kejuruan.id_kejuruan AND kejuruan.id_kejuruan = staf_blk.id_kejuruan AND staf_blk.stafID != '".$stafID."'";
       $query = mysql_query($sql);
       $data = array();
       while ($result = mysql_fetch_assoc($query)) {

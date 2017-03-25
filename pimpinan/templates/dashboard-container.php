@@ -27,22 +27,21 @@
 
           <?php } ?>
 
-			<h5>Sekilas Loker: </h5>
-			<ul class="list-group">
-			<?php if (getRowOfLoker() === 0) { ?>
-
-				<small>Maaf, tidak ada loker.</small>
-
-			<?php
-			} else { 
-				foreach ($lokers as $info) {
-			?>
-				<li class="list-group-item">
-					<span class="label label-primary pull-right"><?= $info['closingDate'] ?></span>
-					<a href="loker?detailLoker=<?= $info['idLoker'] ?>"><small><?= $info['judulLoker'] ?></small></a>&nbsp;
-				</li>
-			<?php } } ?>
-			</ul>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<small>Hit Counter</small>
+					<canvas id="polarAreaChart"></canvas>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<small>OS Penggakses</small>
+					<canvas id="pieChart"></canvas>
+				</div>
+				<div class="container-fluid">
+					<small>Minat Kejuruan</small>
+					<canvas id="barChart"></canvas>
+				</div>
+			</div>
+			
 		</div>
 
 	</div>

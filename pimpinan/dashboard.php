@@ -7,8 +7,8 @@ $lokers = getAllLoker();
 $kejuruan = getAllKejuruan();
 $listmateri = getAllList($_SESSION['stafID']);
 $getPesertaByKejuruan = getPesertaByKejuruan();
-$getStafByKejuruan = getStafByKejuruan();
-$getPesertaByStaf = getPesertaByStaf();
+$getStafByKejuruan = getStafByKejuruan($_SESSION['stafID']);
+$getPesertaByStaf = getPesertaByStaf($_SESSION['stafID']);
 
 if (!isset($_SESSION['stafID'])) {
 	header('Location: ../index');

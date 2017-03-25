@@ -57,6 +57,9 @@
                     <li role="separator" class="divider"></li>
                     <li class="dropdown-header">Info</li>
                     <li><a href="./loker"><i class="glyphicon glyphicon-bookmark"></i>&nbsp; Loker</a></li>
+                    <li>
+                      <a href="./pengumuman"><i class="glyphicon glyphicon-bookmark"></i>&nbsp; Pengumuman</a>
+                    </li>
                   </ul>
                 </li>
                 <li>

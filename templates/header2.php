@@ -41,14 +41,14 @@
                 <li>
                   <a href="./contact"><i class="glyphicon glyphicon-phone-alt"></i>&nbsp; Kontak Kami</a>
                 </li>
+                <li>
+                  <a href="./pendaftaran"><i class="glyphicon glyphicon-file"></i>&nbsp; Pendaftaran</a>
+                </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lainnya <span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <li>
                       <a href="./kejuruan"><i class="glyphicon glyphicon-flash"></i>&nbsp; Kejuruan</a>
-                    </li>
-                    <li>
-                      <a href="./pendaftaran"><i class="glyphicon glyphicon-file"></i>&nbsp; Pendaftaran</a>
                     </li>
                      <li>
                       <a href="./loginStaf"><i class="glyphicon glyphicon-info-sign"></i>&nbsp; Login Staf</a>
@@ -59,6 +59,7 @@
                     <li role="separator" class="divider"></li>
                     <li class="dropdown-header">Info</li>
                     <li><a href="./loker"><i class="glyphicon glyphicon-bookmark"></i>&nbsp; Loker</a></li>
+                    <li><a href="./pengumuman"><i class="glyphicon glyphicon-bookmark"></i>&nbsp; Pengumuman</a></li>
                   </ul>
                 </li>
               </ul>

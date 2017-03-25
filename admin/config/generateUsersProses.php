@@ -44,11 +44,11 @@ $query = "INSERT INTO`users`(`idUser`,`id_peserta`,`username`,`password`,`passno
 $sql = mysql_query($query);
 
 if ($sql) {
-	// header('Location: http://localhost/project_blk/admin/peserta');
-	die($sql);
+	header('Location: http://localhost/project_blk/admin/peserta');
+	// die($sql);
 }else{
-	die($sql);
-	// header('Location: http://localhost/project_blk/admin/peserta');
+	// die($sql);
+	header('Location: http://localhost/project_blk/admin/peserta');
 }
 
 

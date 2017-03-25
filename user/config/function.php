@@ -362,4 +362,16 @@ function getUsername($id_peserta){
 
 }
 
+function getPesertaByKejuruan(){
+
+      $sql = "SELECT peserta.nama AS NAMA, kejuruan.nama_kejuruan AS KEJURUAN, peserta.status_peserta AS STATUS, peserta.id_kejuruan AS ID_KEJURUAN, peserta.id_peserta AS ID_PESERTA, DATE_FORMAT(peserta.tanggalDaftar, '%Y') AS TAHUN FROM peserta, kejuruan WHERE peserta.id_kejuruan = kejuruan.id_kejuruan ORDER BY TAHUN DESC";
+      $query = mysql_query($sql);
+      $data = array();
+      while ($result = mysql_fetch_assoc($query)) {
+            $data[] = $result;
+      }
+
+      return $data;
+
+}
 ?>

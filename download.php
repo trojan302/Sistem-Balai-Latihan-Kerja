@@ -2,7 +2,7 @@
 
 require './config/conn.php';
 
-// if (isset($_GET['file'])) {
+if (isset($_GET['file'])) {
 
     $fileID = base64_decode($_GET['file']);
 
@@ -29,7 +29,7 @@ require './config/conn.php';
     // header yang menunjukkan jenis file yang akan didownload
     header("Content-type: ".$mime);
 
-    // proses membaca isi file yang akan didownload dari folder 'data'
+    // proses membaca isi file yang akan didownload dari folder
     $fp  = fopen("../libs/materi/'".$basename, 'r');
     $content = fread($fp, filesize('../libs/materi/'.$basename));
     fclose($fp);
@@ -39,8 +39,8 @@ require './config/conn.php';
 
     exit;
     
-// }else{
-//     header('Location: http://localhost/project_blk/user/materi');
-// }
+}else{
+    header('Location: http://localhost/project_blk/user/materi');
+}
 
 ?>
