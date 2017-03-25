@@ -43,8 +43,6 @@ Halaman ini menunjukan hasil dari seleksi peserta Balai Latihan Kerja yang di fi
 
 ![enter image description here](https://lh3.googleusercontent.com/-0dlr1Ao9Zik/WNa4LaRPr0I/AAAAAAAABsg/-cA6fv4gZi4meCtzhGtwyE4x3W-jnyCIwCLcB/s0/screenshot-4.png "screenshot-4.png")
 
-The document panel is accessible using the <i class="icon-folder-open"></i> button in the navigation bar. You can create a new document by clicking <i class="icon-file"></i> **New document** in the document panel.
-
 #### <i class="icon-folder-open"></i> Dan Masih Banyak Lagi
 
 Jika anda ingin mendownload project ini atau ingin mengembangkannya silahkan hubungi author:
