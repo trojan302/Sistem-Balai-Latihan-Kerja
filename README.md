@@ -49,7 +49,7 @@ Jika anda ingin mendownload project ini atau ingin mengembangkannya silahkan hub
 
 <kbd><i class="icon-mail"></i> Email 1 : bettadevindonesia@gmail.com</kbd>
 <kbd><i class="icon-mail"></i>  Email 2 : trojan302@gmail.com</kbd>
-<kbd><i class="icon-mail"></i>  Email 3 : imamalimustofa@gmail.com</kbd>
+<kbd><i class="icon-mail"></i>  Email 3 : imamalimustofa01@gmail.com</kbd>
 
 <i class="icon-right-hand"></i> Telepon / SMS
 
