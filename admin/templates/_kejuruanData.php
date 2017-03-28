@@ -37,7 +37,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <th>Perserta Mendaftar</th>
+                        <th>Peserta Mendaftar</th>
                         <td>: 
                         <?php if ($data['Status'] === 'Buka') { ?>
                           <?= mendaftar($data['KejuruanID']) ?>
@@ -47,7 +47,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <th>Perserta Belum Terdaftar</th>
+                        <th>Peserta Belum Terdaftar</th>
                         <td>: 
                         <?php if ($data['Status'] === 'Buka') { ?>
                           <?= belumTerdaftar($data['KejuruanID'], 0) ?>
@@ -57,7 +57,7 @@
                           </td>
                       </tr>
                       <tr>
-                        <th>Perserta Terdaftar</th>
+                        <th>Peserta Terdaftar</th>
                         <td>: 
                         <?php if ($data['Status'] === 'Buka') { ?>
                           <?= terdaftar($data['KejuruanID'], 1) ?>
@@ -67,7 +67,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <th>Options</th>
+                        <th>Pilihan</th>
                         <td>:
                     	<a href="?edit=<?= $data['GelombangID'] ?>" class="btn btn-xs btn-success">Edit</a>
                         </td>

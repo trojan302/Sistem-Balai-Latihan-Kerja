@@ -12,7 +12,7 @@
 			 <?php if (isset($_GET['err'])) { ?>
             
 	            <div class="alert alert-danger alert-dismissible" role="alert">
-	              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://localhost/project_blk/user/dashboard'">&times;</span></button>
+	              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://localhost/project_blk/v.1.0.3/user/dashboard'">&times;</span></button>
 	              <?= $_GET['err'] ?>
 	            </div>
 
@@ -21,7 +21,7 @@
 	          <?php if (isset($_GET['success'])) { ?>
 	            
 	            <div class="alert alert-success alert-dismissible" role="alert">
-	              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://localhost/project_blk/user/dashboard'">&times;</span></button>
+	              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://localhost/project_blk/v.1.0.3/user/dashboard'">&times;</span></button>
 	              <?= $_GET['success'] ?>, Silahkan dicek untuk memastikan perubahan kata sandi atau password dengan logout terlebih dahulu.
 	            </div>
 
@@ -30,13 +30,13 @@
 	          <?php if (isset($_GET['warning'])) { ?>
 	            
 	            <div class="alert alert-warning alert-dismissible" role="alert">
-	              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://localhost/project_blk/user/dashboard'">&times;</span></button>
+	              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://localhost/project_blk/v.1.0.3/user/dashboard'">&times;</span></button>
 	              <?= $_GET['warning'] ?>
 	            </div>
 
 	          <?php } ?>
 
-			<form action="http://localhost/project_blk/user/config/ganti_password.php" method="POST">
+			<form action="http://localhost/project_blk/v.1.0.3/user/config/ganti_password.php" method="POST">
 				<div class="form-group">
 					<label>Username Lama</label>
 					<input type="text" name="username_lama" value="<?= getUsername($_SESSION['id_peserta']) ?>" class="form-control" readonly>

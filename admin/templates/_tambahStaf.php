@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       
-      <h2>Add Staf</h2>
+      <h2>Tambah Staf</h2>
       <hr>
 
       <a href="<?= $url ?>admin/staf" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-arrow-left"></i> Back</a>

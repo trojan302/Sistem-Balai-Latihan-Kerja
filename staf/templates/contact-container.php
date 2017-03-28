@@ -10,6 +10,8 @@
         <b>Alamat :</b><?= $result['contactAlamat']; ?>
 		<b>Telepon :</b><?= $result['contactTelepon']; ?>
 		<br><br>
+		<b> Jadwal Bisa berubah-ubah tanpa pemberitahuan terlebih dahulu </b>
+		<br><br>
 		<div class="container-fluid">
 		<table class="table">
 			<tr>
@@ -22,27 +24,27 @@
 			</tr>
 			<tr>
 				<td class="bg-success">Senin</td>
-				<td class="bg-success">07.30–13.00</td>
+				<td class="bg-success">07.30–13.30</td>
 			</tr>
 			<tr>
 				<td class="bg-success">Selasa</td>
-				<td class="bg-success">07.30–13.00</td>
+				<td class="bg-success">07.30–13.30</td>
 			</tr>
 			<tr>
 				<td class="bg-success">Rabu</td>
-				<td class="bg-success">07.30–13.00</td>
+				<td class="bg-success">07.30–13.30</td>
 			</tr>
 			<tr>
 				<td class="bg-success">Kamis</td>
-				<td class="bg-success">07.30–13.00</td>
+				<td class="bg-success">07.30–13.30</td>
 			</tr>
 			<tr>
 				<td class="bg-success">Jumat</td>
-				<td class="bg-success">07.30–13.00</td>
+				<td class="bg-success">07.30–13.30</td>
 			</tr>
 			<tr>
 				<td class="bg-success">Sabtu</td>
-				<td class="bg-success">07.30–13.00</td>
+				<td class="bg-success">07.30–13.30</td>
 			</tr>
 		</table>
 		</div>

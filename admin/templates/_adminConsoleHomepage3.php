@@ -1,7 +1,7 @@
 <div class="row" id="VisiMisi">
 
         <div class="col-md-4">
-          <h4 class="label label-info">Editable</h4>
+          <h4 class="label label-info">Edit</h4>
           <hr>
           
           <b>Visi &amp; Misi</b>

@@ -1,4 +1,4 @@
-<h2>Tambah Feature</h2>
+<h2>Tambah Features</h2>
 <hr>
 
 <form action="" class="form-group" enctype="multipart/form-data" method="post">

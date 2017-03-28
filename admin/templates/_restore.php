@@ -8,8 +8,8 @@
       if (isset($_GET['restore']) && isset($_GET['delete'])) {
 
         $file = $_GET['delete'];
-        unlink("database/".$file);
-        echo "<script>window.location.href='http://localhost/project_blk/admin/backups?restore=true'</script>";
+        unlink("./database/".$file);
+        echo "<script>window.location.href='http://localhost/project_blk/v.1.0.3/admin/backups?restore=true'</script>";
 
       }
 
@@ -46,10 +46,10 @@
                 <td><?= $filename ?></td>
                 <td><?= Permission($filename) ?></td>
                 <td>
-                  <a href="http://localhost/project_blk/admin/backups?restore=true&delete=<?= $filename ?>" class="btn btn-danger btn-xs">
+                  <a href="http://localhost/project_blk/v.1.0.3/admin/backups?restore=true&delete=<?= $filename ?>" class="btn btn-danger btn-xs">
                     <i class="glyphicon glyphicon-trash"></i>
                   </a>
-                  <a href="http://localhost/project_blk/admin/download.php?filename=<?= $filename ?>" class="btn btn-info btn-xs">
+                  <a href="http://localhost/project_blk/v.1.0.3/admin/download.php?filename=<?= $filename ?>" class="btn btn-info btn-xs">
                     <i class="glyphicon glyphicon-download-alt"></i>
                   </a>
                 </td>
@@ -72,7 +72,7 @@
           <h4>Restore Database</h4>
           <hr>
 
-          <form action="http://localhost/project_blk/admin/config/uploadDataRestore.php" method="POST" enctype="multipart/form-data">
+          <form action="http://localhost/project_blk/v.1.0.3/admin/config/uploadDataRestore.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
               <label>File To Restore</label>
               <input type="file" name="dataRestore" required class="form-control">

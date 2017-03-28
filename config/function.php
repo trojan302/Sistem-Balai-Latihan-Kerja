@@ -2,8 +2,8 @@
 
 require './config/conn.php';
 
-$url = "http://localhost/project_blk/";
-$icon = "http://localhost/project_blk/libs/photos/icon_blk.png";
+$url = "http://localhost/project_blk/v.1.0.3/";
+$icon = "http://localhost/project_blk/v.1.0.3/libs/photos/icon_blk.png";
 
 function maxKuota($id){
 

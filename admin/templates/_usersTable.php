@@ -22,8 +22,8 @@
 			<th>Username</th>
 			<th>Alamat</th>
 			<th>No. HP / Telepon</th>
-			<th>Date Registers</th>
-			<th>Options</th>
+			<th>Tanggal Daftar</th>
+			<th>Pilihan</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -37,7 +37,7 @@
 			<td><?= $user['PesertaTelepon'] ?></td>
 			<td><?= $user['DateCreated'] ?></td>
 			<td>
-				<a href="?url=delete&id=<?= $user['UserID'] ?>" class="btn btn-danger btn-xs">Delete</a>
+				<a href="?url=delete&id=<?= $user['UserID'] ?>" class="btn btn-danger btn-xs">Hapus</a>
 			</td>
 		</tr>
 

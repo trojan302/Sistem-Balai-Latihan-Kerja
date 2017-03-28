@@ -1,7 +1,7 @@
 <div class="row">
 
         <div class="col-md-4">
-          <h4 class="label label-info">Editable</h4>
+          <h4 class="label label-info">Edit</h4>
           <hr>
 
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -176,7 +176,7 @@
           <?php if (isset($_GET['err'])) { ?>
             
             <div class="alert alert-danger alert-dismissible" role="alert">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://localhost/project_blk/admin/homepage'">&times;</span></button>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='<?= $url ?>admin/homepage'">&times;</span></button>
               <?= $_GET['err'] ?>
             </div>
 
@@ -185,7 +185,7 @@
           <?php if (isset($_GET['success'])) { ?>
             
             <div class="alert alert-success alert-dismissible" role="alert">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://localhost/project_blk/admin/homepage'">&times;</span></button>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='<?= $url ?>admin/homepage'">&times;</span></button>
               <?= $_GET['success'] ?>
             </div>
 

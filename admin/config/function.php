@@ -2,8 +2,8 @@
 
 require './config/conn.php';
 
-$url = "http://localhost/project_blk/";
-$icon = "http://localhost/project_blk/libs/photos/icon_blk.png";
+$url = "http://localhost/project_blk/v.1.0.3/";
+$icon = "http://localhost/project_blk/v.1.0.3/libs/photos/icon_blk.png";
 
 function maxKuota($id){
 
@@ -104,7 +104,7 @@ function deleteUser($id) {
 
 	if ($sql) {
 		
-		header('Location: http://localhost/project_blk/admin/users');
+		header('Location: http://localhost/project_blk/v.1.0.3/admin/users');
 
 	}
 
@@ -509,11 +509,7 @@ function deletePeserta($id_peserta){
 	$query2 = "DELETE FROM users WHERE id_peserta = '$id_peserta'";
 	$sql2 = mysql_query($query2);
 
-	if ($sql && sql2) {
-		
-		header('Location: http://localhost/project_blk/admin/peserta');
-
-	}
+	echo "<script>window.location.href='http://localhost/project_blk/v.1.0.3/admin/peserta'</script>";
 
 }
 
@@ -524,7 +520,7 @@ function deleteStaf($stafID){
 
 	if ($sql) {
 		
-		header('Location: http://localhost/project_blk/admin/staf');
+		header('Location: http://localhost/project_blk/v.1.0.3/admin/staf');
 
 	}
 

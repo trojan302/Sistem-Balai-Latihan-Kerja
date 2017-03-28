@@ -2,7 +2,7 @@
     	<div class="row">
 
 	        <div class="col-md-4">
-	          <h4 class="label label-info">Editable</h4>
+	          <h4 class="label label-info">Edit</h4>
 	          <hr>
 	          <?php include 'listLoker.php'; ?>
 	        </div>

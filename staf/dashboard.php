@@ -41,6 +41,11 @@ if (isset($_GET['profile'])) {
 
 	require './templates/dashboard-ganti-password-container.php';
 
+}else if (isset($_GET['MateriDelete'])) {
+	
+	deleteMateri($_GET['MateriDelete']);
+	header('Location: http://localhost/project_blk/v.1.0.3/staf/dashboard');
+
 }else{
 
 	require './templates/dashboard-container.php';

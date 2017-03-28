@@ -80,7 +80,7 @@ if (isset($_POST['share'])) {
 					'stafID' => $stafID,
 					'id_kejuruan' => $kejuruanID,
 					'judulMateri' => $judulMateri,
-					'fileMateri' => str_replace('../../','http://localhost/project_blk/', $pathUpload),
+					'fileMateri' => str_replace('../../','http://localhost/project_blk/v.1.0.3/', $pathUpload),
 					'deksripsi' => $deksripsi,
 					'uploaded' => date('Y-m-d'),
 					'extension' => $ext,
@@ -90,26 +90,26 @@ if (isset($_POST['share'])) {
 				$sukses = uploadToServer($dataUpload);
 
 				if ($sukses == true) {
-					header('Location: http://localhost/project_blk/staf/dashboard?success='. urlencode('data berhasil diunggah'));
+					header('Location: http://localhost/project_blk/v.1.0.3/staf/dashboard?success='. urlencode('data berhasil diunggah'));
 				}else{
-					header('Location: http://localhost/project_blk/staf/dashboard?err='. urlencode('data gagal diunggah'));
+					header('Location: http://localhost/project_blk/v.1.0.3/staf/dashboard?err='. urlencode('data gagal diunggah'));
 				}
 
 			}else{
 
-				header('Location: http://localhost/project_blk/staf/dashboard?err='. urlencode('data gagal diunggah'));
+				header('Location: http://localhost/project_blk/v.1.0.3/staf/dashboard?err='. urlencode('data gagal diunggah'));
 
 			}
 
 		}else{
 
-			header('Location: http://localhost/project_blk/staf/dashboard?err='. urlencode('File tidak boleh lebih dari 10 MB'));
+			header('Location: http://localhost/project_blk/v.1.0.3/staf/dashboard?err='. urlencode('File tidak boleh lebih dari 10 MB'));
 
 		}
 
 	}else{
 
-		header('Location: http://localhost/project_blk/staf/dashboard?err='. urlencode('Ektensi yang diijinkan hanya (.docx, .pptx, .xlsx, .pdf, .doc, .ptt, .xls)'));
+		header('Location: http://localhost/project_blk/v.1.0.3/staf/dashboard?err='. urlencode('Ektensi yang diijinkan hanya (.docx, .pptx, .xlsx, .pdf, .doc, .ptt, .xls)'));
 	}
 
 }

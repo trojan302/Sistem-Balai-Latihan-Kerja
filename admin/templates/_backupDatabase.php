@@ -1,13 +1,13 @@
 <div class="row">
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       
-      <h2><i class="glyphicon glyphicon-cloud-download"></i> Backup Configuration</h2>
+      <h2><i class="glyphicon glyphicon-cloud-download"></i> Susunan Backup </h2>
       <hr>
 
       <?php if (isset($_GET['err'])) { ?>
             
         <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://localhost/project_blk/admin/backups'">&times;</span></button>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='<?= $url ?>admin/backups'">&times;</span></button>
           <?= $_GET['err'] ?>
         </div>
 
@@ -16,13 +16,13 @@
       <?php if (isset($_GET['success'])) { ?>
         
         <div class="alert alert-success alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://localhost/project_blk/admin/backups?listBackup=true'">&times;</span></button>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='<?= $url ?>admin/backups?listBackup=true'">&times;</span></button>
           <?= $_GET['success'] ?>
         </div>
 
       <?php } ?>
 
-      <form action="http://localhost/project_blk/admin/config/backupConfig.php" method="POST" class="container-fluid">
+      <form action="<?= $url ?>admin/config/backupConfig.php" method="POST" class="container-fluid">
         <div class="form-group">
           <label><i class="glyphicon glyphicon-calendar"></i> Waktu Backups</label>
           <br>

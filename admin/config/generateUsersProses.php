@@ -5,7 +5,7 @@ require './conn.php';
 $id = $_GET['user'];
 
 if (!isset($id)) {
-	header('Location: http://localhost/project_blk/admin/peserta');
+	header('Location: http://localhost/project_blk/v.1.0.3/admin/peserta');
 }
 
 function generatorUsers($id){
@@ -44,11 +44,11 @@ $query = "INSERT INTO`users`(`idUser`,`id_peserta`,`username`,`password`,`passno
 $sql = mysql_query($query);
 
 if ($sql) {
-	header('Location: http://localhost/project_blk/admin/peserta');
+	header('Location: http://localhost/project_blk/v.1.0.3/admin/peserta');
 	// die($sql);
 }else{
 	// die($sql);
-	header('Location: http://localhost/project_blk/admin/peserta');
+	header('Location: http://localhost/project_blk/v.1.0.3/admin/peserta');
 }
 
 

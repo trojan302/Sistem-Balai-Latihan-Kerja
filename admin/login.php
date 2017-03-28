@@ -8,11 +8,11 @@
     <title>Login Admin</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="http://localhost/project_blk/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" href="http://localhost/project_blk/user/libs/photos/icon_blk.png">
+    <link href="http://localhost/project_blk/v.1.0.3/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="http://localhost/project_blk/v.1.0.3/user/libs/photos/icon_blk.png">
 
     <!-- Custom styles for this template -->
-    <link href="http://localhost/project_blk/admin/libs/signin.css" rel="stylesheet">
+    <link href="http://localhost/project_blk/v.1.0.3/admin/libs/signin.css" rel="stylesheet">
 
   </head>
 
@@ -23,13 +23,13 @@
       <?php if (isset($_GET['err'])) { ?>
             
         <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://localhost/project_blk/admin/login'">&times;</span></button>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="window.location.href='http://localhost/project_blk/v.1.0.3/admin/login'">&times;</span></button>
           <?= $_GET['err'] ?>
         </div>
 
       <?php } ?>
 
-      <form class="form-signin" action="http://localhost/project_blk/admin/prosesLogin.php" method="POST">
+      <form class="form-signin" action="http://localhost/project_blk/v.1.0.3/admin/prosesLogin.php" method="POST">
         <h2 class="form-signin-heading">Login As Admin</h2>
         <label class="sr-only">Email address</label>
         <input type="email" class="form-control" name="email" placeholder="Email address" required autofocus>

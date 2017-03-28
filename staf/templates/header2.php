@@ -8,12 +8,12 @@
     <meta name="author" content="">
 
     <title>Balai Latihan Kerja | PEMKAB Magelang</title>
-    <link rel="icon" href="http://localhost/project_blk/libs/photos/icon_blk.png">
-    <link href="http://localhost/project_blk/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://localhost/project_blk/staf/libs/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://localhost/project_blk/libs/fonts/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://localhost/project_blk/node_modules/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="http://localhost/project_blk/node_modules/buttons.dataTables.min.css">
+    <link rel="icon" href="http://localhost/project_blk/v.1.0.3/libs/photos/icon_blk.png">
+    <link href="http://localhost/project_blk/v.1.0.3/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost/project_blk/v.1.0.3/staf/libs/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost/project_blk/v.1.0.3/libs/fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://localhost/project_blk/v.1.0.3/node_modules/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="http://localhost/project_blk/v.1.0.3/node_modules/buttons.dataTables.min.css">
   </head>
 
   <body>
@@ -28,7 +28,7 @@
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="./">
-                <img src="http://localhost/project_blk/libs/photos/icon_blk.png" alt="Balai Latihan Kerja" class="pull-left" style="width:20px;height:23px;"> &nbsp; Balai Latihan Kerja
+                <img src="http://localhost/project_blk/v.1.0.3/libs/photos/icon_blk.png" alt="Balai Latihan Kerja" class="pull-left" style="width:20px;height:23px;"> &nbsp; Balai Latihan Kerja
               </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">

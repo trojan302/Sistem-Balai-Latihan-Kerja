@@ -2,7 +2,7 @@
 <div class="row">
   <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       
-      <h2>Staf Configuration</h2>
+      <h2>Halaman Staf</h2>
       <hr>
 
       <a href="?_tambahStaf" class="btn btn-primary btn-xs" style="margin-right: 30px;">
@@ -20,7 +20,7 @@
 
       <hr>
       <?php if($rowStaf < 1): ?>
-      <div class="text-center">Data staf is empty...</div>
+      <div class="text-center">Data staf kosong...</div>
       <?php else: ?>
       <table id="table-staf" class="table table-condensed table-striped table-hover">
       <thead>
@@ -32,7 +32,7 @@
           <th>Email</th>
           <th>Kejuruan</th>
           <th>Jabatan</th>
-          <th>Action</th>
+          <th>Aksi</th>
         </tr>
         </thead>
         <tbody>

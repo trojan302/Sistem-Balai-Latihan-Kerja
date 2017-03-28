@@ -2,13 +2,13 @@
 
 require './config/function.php';
 
-$print = isset($_GET['print']) && isset($_GET['id']) ? $_GET['id'] : header('Location: http://localhost/project_blk/user/dashboard');
+$print = isset($_GET['print']) && isset($_GET['id']) ? $_GET['id'] : header('Location: http://localhost/project_blk/v.1.0.3/user/dashboard');
 
 require_once("../vendor/autoload.php");
 use Dompdf\Dompdf;
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'http://localhost/project_blk/user/contents.php?id='.$_GET['id']);
+curl_setopt($ch, CURLOPT_URL, 'http://localhost/project_blk/v.1.0.3/user/contents.php?id='.$_GET['id']);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $contents = curl_exec($ch);
 curl_close($ch);

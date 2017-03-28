@@ -66,7 +66,7 @@
       <label>Judul Loker</label>
       <input type="text" id="judulLoker" class="form-control" value="<?= $data['judulLoker'] ?>">
       <br>
-      <label>Closing Date</label>
+      <label>Tanggal tutup</label>
       <input type="date" id="closingDate" class="form-control" value="<?= $data['closingDate'] ?>">  
       <br>
       <input type="hidden" id="idLoker" value="<?= $data['idLoker'] ?>">

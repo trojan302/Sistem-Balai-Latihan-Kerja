@@ -1,5 +1,5 @@
 <h3>Daftar Loker :</h3>
-<a href="?tambah=loker" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i> Tulis Lokers</a>
+<a href="?tambah=loker" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-pencil"></i> Tulis Loker</a>
 <br><br>
 <ul class="list-group">
 <?php if (getRowOfLoker() === 0) { ?>

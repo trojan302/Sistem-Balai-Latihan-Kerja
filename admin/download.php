@@ -4,8 +4,8 @@ if (isset($_GET['filename'])) {
 
     $file = $_GET['filename'];
 
-    $filename = str_replace('http://localhost/project_blk/admin/database/','./database/',$file);
-    $fileinfo = str_replace('http://localhost/project_blk/admin/database/','', $file);
+    $filename = str_replace('http://localhost/project_blk/v.1.0.3/admin/database/','./database/',$file);
+    $fileinfo = str_replace('http://localhost/project_blk/v.1.0.3/admin/database/','', $file);
     $fileexts       = pathinfo($fileinfo);
     $basename       = $fileexts['basename'];
     $filename       = $fileexts['filename'];
@@ -15,7 +15,7 @@ if (isset($_GET['filename'])) {
     echo $mime;
 
     // header yang menunjukkan nama file yang akan didownload
-    header("Content-Disposition: attachment; filename=".$basename);
+    header("Content-Disposition: attachment; filename=".$basename.'.'.$ext);
 
     // header yang menunjukkan ukuran file yang akan didownload
     header("Content-length: ".$result['size']);
@@ -25,7 +25,7 @@ if (isset($_GET['filename'])) {
 
     // proses membaca isi file yang akan didownload dari folder
     $fp  = fopen("./database/'".$basename, 'r');
-    $content = fread($fp, filesize('./database/'.$basename));
+    $content = fread($fp, filesize('./database/'.$basename.'.'.$ext));
     fclose($fp);
 
     // menampilkan isi file yang akan didownload
@@ -34,7 +34,7 @@ if (isset($_GET['filename'])) {
     exit;
     
 }else{
-    header('Location: http://localhost/project_blk/admin/backups?restore=true');
+    header('Location: http://localhost/project_blk/v.1.0.3/admin/backups?restore=true');
 }
 
 ?>

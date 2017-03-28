@@ -8,10 +8,10 @@
     <meta name="author" content="">
 
     <title>Balai Latihan Kerja | PEMKAB Magelang</title>
-    <link rel="icon" href="http://localhost/project_blk/libs/photos/icon_blk.png">
-    <link href="http://localhost/project_blk/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://localhost/project_blk/staf/libs/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://localhost/project_blk/libs/fonts/css/font-awesome.min.css">
+    <link rel="icon" href="http://localhost/project_blk/v.1.0.3/libs/photos/icon_blk.png">
+    <link href="http://localhost/project_blk/v.1.0.3/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost/project_blk/v.1.0.3/staf/libs/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost/project_blk/v.1.0.3/libs/fonts/css/font-awesome.min.css">
   </head>
   <body>
     <div class="navbar-wrapper">
@@ -27,7 +27,7 @@
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="./">
-                <img src="http://localhost/project_blk/libs/photos/icon_blk.png" alt="Balai Latihan Kerja" class="pull-left" style="width:20px;height:23px;"> &nbsp; <span class="small">Balai Latihan Kerja</span>
+                <img src="http://localhost/project_blk/v.1.0.3/libs/photos/icon_blk.png" alt="Balai Latihan Kerja" class="pull-left" style="width:20px;height:23px;"> &nbsp; <span class="small">Balai Latihan Kerja</span>
               </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
@@ -39,14 +39,14 @@
                   <a href="./profil"><i class="glyphicon glyphicon-info-sign"></i>&nbsp; Profil</a>
                 </li>
                 <li>
+                      <a href="./kejuruan"><i class="glyphicon glyphicon-flash"></i>&nbsp; Kejuruan</a>
+                </li>
+                <li>
                   <a href="./contact"><i class="glyphicon glyphicon-phone-alt"></i>&nbsp; Kontak Kami</a>
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lainnya <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li>
-                      <a href="./kejuruan"><i class="glyphicon glyphicon-flash"></i>&nbsp; Kejuruan</a>
-                    </li>
                     <li>
                       <a href="./materi"><i class="glyphicon glyphicon-book"></i>&nbsp; Materi Instruktur</a>
                     </li>

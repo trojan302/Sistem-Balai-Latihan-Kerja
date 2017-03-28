@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Website Balai Latihan Kerja Pemkab Magelang, Didedikasikan untuk memudahkan masyarakat mengakses informasi dari Balai Latihan Kerja Pemkab Magelang">
-    <meta name="author" content="Betta Dev Indonesia | Github : @trojan302 | Fanspage : @bettadevindonesia">
+    <meta name="author" content="K.N.Fadhilah">
 
     <title>Balai Latihan Kerja | PEMKAB Magelang</title>
-    <link rel="icon" href="http://localhost/project_blk/libs/photos/icon_blk.png">
+    <link rel="icon" href="http://localhost/project_blk/v.1.0.3/libs/photos/icon_blk.png">
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./libs/fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://localhost/project_blk/v.1.0.3/node_modules/jquery-ui.css">
     <link href="./libs/style.css" rel="stylesheet">
   </head>
   <body>
@@ -39,17 +40,18 @@
                   <a href="./profil"><i class="glyphicon glyphicon-info-sign"></i>&nbsp; Profil</a>
                 </li>
                 <li>
-                  <a href="./contact"><i class="glyphicon glyphicon-phone-alt"></i>&nbsp; Kontak Kami</a>
+                    <a href="./kejuruan"><i class="glyphicon glyphicon-flash"></i>&nbsp; Kejuruan</a>
                 </li>
                 <li>
                   <a href="./pendaftaran"><i class="glyphicon glyphicon-file"></i>&nbsp; Pendaftaran</a>
                 </li>
+                <li>
+                  <a href="./contact"><i class="glyphicon glyphicon-phone-alt"></i>&nbsp; Kontak Kami</a>
+                </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lainnya <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li>
-                      <a href="./kejuruan"><i class="glyphicon glyphicon-flash"></i>&nbsp; Kejuruan</a>
-                    </li>
+                    
                     <li>
                       <a href="./loginStaf"><i class="glyphicon glyphicon-info-sign"></i>&nbsp; Login Staf</a>
                     </li>

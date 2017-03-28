@@ -10,7 +10,7 @@
 			<div class="panel panel-default">
 			  <div class="panel-heading">
 				  <span class="pull-left">Bukti Pendaftaran</span>
-				  <span class="pull-right"><a href="http://localhost/project_blk/user/print?print=bukti_daftar&id=<?= $peserta['id_peserta'] ?>" class="btn btn-xs btn-primary" target="_blank"><i class="glyphicon glyphicon-print"></i> Print Bukti</a></span>
+				  <span class="pull-right"><a href="http://localhost/project_blk/v.1.0.3/user/print?print=bukti_daftar&id=<?= $peserta['id_peserta'] ?>" class="btn btn-xs btn-primary" target="_blank"><i class="glyphicon glyphicon-print"></i> Print Bukti</a></span>
 				  <div class="clearfix"></div>
 			  </div>
 			  <div class="panel-body">

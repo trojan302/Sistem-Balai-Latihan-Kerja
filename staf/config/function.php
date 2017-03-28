@@ -2,8 +2,8 @@
 
 require './config/conn.php';
 
-$url = "http://localhost/project_blk/";
-$icon = "http://localhost/project_blk/user/libs/photos/icon_blk.png";
+$url = "http://localhost/project_blk/v.1.0.3/";
+$icon = "http://localhost/project_blk/v.1.0.3/user/libs/photos/icon_blk.png";
 
 function maxKuota($id){
 
@@ -226,7 +226,7 @@ function pendidikan($id_pendidikan){
 
 function __generatorID($id_kejuruan){
 
-      $sql = "SELECT CONCAT(LEFT(kejuruan.nama_kejuruan, 2),'-',DATE_FORMAT(peserta.tanggalDaftar, '%Y-%d'),peserta.id_peserta) AS ID_DAFTAR FROM kejuruan INNER JOIN peserta ON kejuruan.id_kejuruan = peserta.id_peserta WHERE kejuruan.id_kejuruan='$id_kejuruan'";
+      $sql = "SELECT CONCAT(LEFT(kejuruan.nama_kejuruan, 2),'-',DATE_FORMAT(peserta.tanggalDaftar, '%Y-%d'),peserta.id_peserta) AS ID_DAFTAR FROM kejuruan INNER JOIN peserta ON kejuruan.id_kejuruan = peserta.id_kejuruan WHERE kejuruan.id_kejuruan='$id_kejuruan'";
       $query = mysql_query($sql);
       $result = mysql_fetch_assoc($query);
 
@@ -393,6 +393,34 @@ function getUsername($stafID){
 	$result = mysql_fetch_assoc($query);
 
 	return $result['username'];
+
+}
+
+function getPesertaByKejuruan(){
+
+      $sql = "SELECT peserta.nama AS NAMA, kejuruan.nama_kejuruan AS KEJURUAN, peserta.status_peserta AS STATUS, peserta.id_kejuruan AS ID_KEJURUAN, peserta.id_peserta AS ID_PESERTA, DATE_FORMAT(peserta.tanggalDaftar, '%Y') AS TAHUN FROM peserta, kejuruan WHERE peserta.id_kejuruan = kejuruan.id_kejuruan ORDER BY TAHUN DESC";
+      $query = mysql_query($sql);
+      $data = array();
+      while ($result = mysql_fetch_assoc($query)) {
+            $data[] = $result;
+      }
+
+      return $data;
+
+}
+
+function deleteMateri($id_materi){
+
+	$query = "SELECT * FROM materi WHERE materiID='$id_materi'";
+	$sql = mysql_query($query);
+	$result = mysql_fetch_array($sql);
+
+	$file = str_replace('http://localhost/project_blk/v.1.0.3/','../', $result['fileMateri']);
+
+	unlink($file);
+
+	$sql 	= "DELETE FROM materi WHERE materiID='$id_materi'";
+	$query 	= mysql_query($sql);
 
 }
 

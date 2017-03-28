@@ -1,11 +1,11 @@
 <div class="row" id="Features">
 
         <div class="col-md-4">
-          <h4 class="label label-info">Editable</h4>
+          <h4 class="label label-info">Edit</h4>
           <hr>
           
           <a href="?tambah=features" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-plus"></i> Tambah Features</a> <br><br>
-          <span><b>Lists Judul Feature</b></span>
+          <span><b>List Judul Feature</b></span>
           <ul class="list-group">
           <?php if (getRowOfFeatures() === 0) { ?>
             <li class="list-group-item">Tidak ada Features</li>

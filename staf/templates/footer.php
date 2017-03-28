@@ -1,21 +1,21 @@
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; <?= date('Y'); ?> Betta Dev Indonesia, Ltd. 
+        <p>&copy; <?= date('Y'); ?> K.N.Fadhilah
         &middot; <a href="#">Privacy</a> 
         &middot; <a href="#">Terms</a></p>
       </footer>
 
     </div>
-    <script src="http://localhost/project_blk/node_modules/jquery.js"></script>
-    <script src="http://localhost/project_blk/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="http://localhost/project_blk/node_modules/jquery.dataTables.min.js"></script> 
-    <script type="text/javascript" src="http://localhost/project_blk/libs/js/tableExport/tableExport.js"></script>
-    <script type="text/javascript" src="http://localhost/project_blk/libs/js/tableExport/jquery.base64.js"></script>
-    <script type="text/javascript" src="http://localhost/project_blk/libs/js/tableExport/html2canvas.js"></script>
-    <script type="text/javascript" src="http://localhost/project_blk/libs/js/tableExport/jspdf/jspdf.js"></script>
-    <script type="text/javascript" src="http://localhost/project_blk/libs/js/tableExport/jspdf/libs/base64.js"></script>
-    <script type="text/javascript" src="http://localhost/project_blk/libs/js/tableExport/jspdf/libs/sprintf.js"></script>
-    <script type="text/javascript" src="http://localhost/project_blk/libs/js/tableExport/tableExport.jquery.json"></script>
+    <script src="http://localhost/project_blk/v.1.0.3/node_modules/jquery.js"></script>
+    <script src="http://localhost/project_blk/v.1.0.3/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="http://localhost/project_blk/v.1.0.3/node_modules/jquery.dataTables.min.js"></script> 
+    <script type="text/javascript" src="http://localhost/project_blk/v.1.0.3/libs/js/tableExport/tableExport.js"></script>
+    <script type="text/javascript" src="http://localhost/project_blk/v.1.0.3/libs/js/tableExport/jquery.base64.js"></script>
+    <script type="text/javascript" src="http://localhost/project_blk/v.1.0.3/libs/js/tableExport/html2canvas.js"></script>
+    <script type="text/javascript" src="http://localhost/project_blk/v.1.0.3/libs/js/tableExport/jspdf/jspdf.js"></script>
+    <script type="text/javascript" src="http://localhost/project_blk/v.1.0.3/libs/js/tableExport/jspdf/libs/base64.js"></script>
+    <script type="text/javascript" src="http://localhost/project_blk/v.1.0.3/libs/js/tableExport/jspdf/libs/sprintf.js"></script>
+    <script type="text/javascript" src="http://localhost/project_blk/v.1.0.3/libs/js/tableExport/tableExport.jquery.json"></script>
     <script>
       $(document).ready( function () {
           $('#table-peserta-per-kejuruan').DataTable();   

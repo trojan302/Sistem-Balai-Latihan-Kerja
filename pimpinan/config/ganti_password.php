@@ -30,7 +30,7 @@ if (isset($_POST['ganti_password'])) {
 
 			if (strlen($_POST['password1']) <= 5 || strlen($_POST['re_password1']) <= 5) {
 
-				header('Location: http://localhost/project_blk/pimpinan/dashboard?ganti_password=true&warning='. urlencode('Password harus lebih dari 5 karakter'));
+				header('Location: http://localhost/project_blk/v.1.0.3/pimpinan/dashboard?ganti_password=true&warning='. urlencode('Password harus lebih dari 5 karakter'));
 				
 			}else{
 
@@ -43,11 +43,11 @@ if (isset($_POST['ganti_password'])) {
 
 							if ($runUpdate) {
 								
-								header('Location: http://localhost/project_blk/pimpinan/dashboard?ganti_password=true&success='. urlencode('Password sudah diubah'));
+								header('Location: http://localhost/project_blk/v.1.0.3/pimpinan/dashboard?ganti_password=true&success='. urlencode('Password sudah diubah'));
 
 							}else{
 
-								header('Location: http://localhost/project_blk/pimpinan/dashboard?ganti_password=true&err='. urlencode('Password gagal diubah'));
+								header('Location: http://localhost/project_blk/v.1.0.3/pimpinan/dashboard?ganti_password=true&err='. urlencode('Password gagal diubah'));
 
 							}
 
@@ -58,11 +58,11 @@ if (isset($_POST['ganti_password'])) {
 
 							if ($runUpdate) {
 								
-								header('Location: http://localhost/project_blk/pimpinan/dashboard?ganti_password=true&success='. urlencode('Password sudah diubah'));
+								header('Location: http://localhost/project_blk/v.1.0.3/pimpinan/dashboard?ganti_password=true&success='. urlencode('Password sudah diubah'));
 
 							}else{
 
-								header('Location: http://localhost/project_blk/pimpinan/dashboard?ganti_password=true&err='. urlencode('Password gagal diubah'));
+								header('Location: http://localhost/project_blk/v.1.0.3/pimpinan/dashboard?ganti_password=true&err='. urlencode('Password gagal diubah'));
 
 							}
 
@@ -70,7 +70,7 @@ if (isset($_POST['ganti_password'])) {
 
 				}else{
 
-					header('Location: http://localhost/project_blk/pimpinan/dashboard?ganti_password=true&err='. urlencode('Password baru tidak sama<br>'));
+					header('Location: http://localhost/project_blk/v.1.0.3/pimpinan/dashboard?ganti_password=true&err='. urlencode('Password baru tidak sama<br>'));
 
 				}
 
@@ -78,7 +78,7 @@ if (isset($_POST['ganti_password'])) {
 			
 		}else{
 
-			header('Location: http://localhost/project_blk/pimpinan/dashboard?ganti_password=true&err='. urlencode('Password lama tidak sama<br>'));
+			header('Location: http://localhost/project_blk/v.1.0.3/pimpinan/dashboard?ganti_password=true&err='. urlencode('Password lama tidak sama<br>'));
 
 		}
 		
@@ -86,7 +86,7 @@ if (isset($_POST['ganti_password'])) {
 
 }else{
 
-	header('Location: http://localhost/project_blk/pimpinan/dashboard');
+	header('Location: http://localhost/project_blk/v.1.0.3/pimpinan/dashboard');
 
 }
 

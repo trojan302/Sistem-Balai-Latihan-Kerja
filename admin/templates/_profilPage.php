@@ -6,7 +6,7 @@
   	<div class="row">
 
         <div class="col-md-6">
-          <h4 class="label label-info">Editable</h4>
+          <h4 class="label label-info">Edit</h4>
           <hr>
           <?php include '_profileReadyFormEditable.php'; ?>
         </div>

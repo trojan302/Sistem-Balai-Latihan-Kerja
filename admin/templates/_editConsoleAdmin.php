@@ -1,4 +1,4 @@
-<h2>Edit Feature</h2>
+<h2>Edit Features</h2>
 <hr>
 
 <form action="" class="form-group" method="post">

@@ -35,7 +35,7 @@ $query = mysql_query($sql);
         <td>IP</td>
         <td>Browser</td>
         <td>OS</td>
-        <td>Date</td>
+        <td>Tanggal</td>
     </tr>
     <?php
     while ($row= mysql_fetch_assoc($query)) { ?>

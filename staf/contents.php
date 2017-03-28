@@ -7,7 +7,7 @@ $peserta = getPeserta($_GET['id']);
 <html>
 <head>
 	<title>Bukti Pembayaran</title>
-	<link rel="stylesheet" href="http://localhost/project_blk/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://localhost/project_blk/v.1.0.3/node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
 

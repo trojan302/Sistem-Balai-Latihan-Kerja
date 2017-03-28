@@ -18,7 +18,7 @@ function iconDisplay($extension){
 ?>
 <div class="starter-template">
 
-	<h1><i class="glyphicon glyphicon-book"></i> Dashboard</h1>
+	<h1><i class="glyphicon glyphicon-book"></i> Beranda</h1>
 	<div class="row">
 		
 		<?php require '_sideBarStaf.php'; ?>
@@ -41,7 +41,7 @@ function iconDisplay($extension){
 
 				
 
-				<button class="btn btn-default btn-sm" type="button" onclick="location.href='download.php?fileMateri=<?= $materi[0]['fileMateri'] ?>'"><?= iconDisplay($materi[0]['extension']) ?> Download File</button>
+				<a class="btn btn-default btn-sm" href="download.php?fileMateri=<?= $materi[0]['fileMateri'] ?>"><?= iconDisplay($materi[0]['extension']) ?> Download File</a>
 
 				<br>
 

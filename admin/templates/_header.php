@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Admin Panel</title>
-    <link href="http://localhost/project_blk/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost/project_blk/v.1.0.3/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="<?= $icon ?>">
-    <link rel="stylesheet" href="http://localhost/project_blk/admin/node_modules/main.css">
-    <link rel="stylesheet" href="http://localhost/project_blk/libs/fonts/css/font-awesome.min.css">
-    <link href="http://localhost/project_blk/admin/node_modules/dashboard.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://localhost/project_blk/node_modules/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="http://localhost/project_blk/node_modules/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="http://localhost/project_blk/v.1.0.3/admin/node_modules/main.css">
+    <link rel="stylesheet" href="http://localhost/project_blk/v.1.0.3/libs/fonts/css/font-awesome.min.css">
+    <link href="http://localhost/project_blk/v.1.0.3/admin/node_modules/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost/project_blk/v.1.0.3/node_modules/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="http://localhost/project_blk/v.1.0.3/node_modules/buttons.dataTables.min.css">
     <style>
       body{
         overflow-x: hidden;
@@ -32,11 +32,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="http://localhost/project_blk/admin/">Admin Panel</a>
+          <a class="navbar-brand" href="http://localhost/project_blk/v.1.0.3/admin/">Admin Panel</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="./">Dashboard</a></li>
+            <li><a href="./">Halaman Admin</a></li>
             <li><a href="#"><?= $_SESSION['login'] ?></a></li>
             <li><a href="./logout">Logout</a></li>
           </ul>

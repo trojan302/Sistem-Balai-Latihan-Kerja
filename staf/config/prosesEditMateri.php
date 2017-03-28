@@ -30,8 +30,8 @@ function updateDataServer($dataUpdated){
 
 }
 
-$purePath	 	= '../../libs/materi/'.str_replace('http://localhost/project_blk/libs/materi/','', $_POST['fileMateri']);
-$file 			= str_replace('http://localhost/project_blk/libs/materi/','', $_POST['fileMateri']);
+$purePath	 	= '../../libs/materi/'.str_replace('http://localhost/project_blk/v.1.0.3/libs/materi/','', $_POST['fileMateri']);
+$file 			= str_replace('http://localhost/project_blk/v.1.0.3/libs/materi/','', $_POST['fileMateri']);
 $judulMateri 	= $_POST['judulMateri'];
 $deskripsi 		= $_POST['deskripsi'];
 $materiID		= $_POST['materiID'];
@@ -73,7 +73,7 @@ if (file_exists($purePath)) {
 
 			$dataUpdated = array(
 				'judulMateri' => $judulMateri,
-				'fileMateri' => str_replace('../../','http://localhost/project_blk/', $pathUpload),
+				'fileMateri' => str_replace('../../','http://localhost/project_blk/v.1.0.3/', $pathUpload),
 				'deskripsi' => $deskripsi,
 				'uploaded' => date('Y-m-d'),
 				'extension' => $ext,
@@ -93,13 +93,13 @@ if (file_exists($purePath)) {
 
 		}else{
 
-			header('Location: http://localhost/project_blk/staf/dashboard?err='. urlencode('File tidak boleh lebih dari 10 MB'));
+			header('Location: http://localhost/project_blk/v.1.0.3/staf/dashboard?err='. urlencode('File tidak boleh lebih dari 10 MB'));
 
 		}
 
 	}else{
 
-		header('Location: http://localhost/project_blk/staf/dashboard?err='. urlencode('Ektensi yang diijinkan hanya (.docx, .pptx, .xlsx, .pdf, .doc, .ptt, .xls)'));
+		header('Location: http://localhost/project_blk/v.1.0.3/staf/dashboard?err='. urlencode('Ektensi yang diijinkan hanya (.docx, .pptx, .xlsx, .pdf, .doc, .ptt, .xls)'));
 	}
 	
 	// $sql = "UPDATE materi SET judulMateri='$judulMateri', deskripsi='$deskripsi', fileMateri='$file' WHERE materiID='$materiID'";

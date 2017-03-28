@@ -14,7 +14,7 @@
 			</tr>
 		</thead>
 		<tbody>
-		<?php $no=1; foreach (getPesertaByKejuruan() as $data): ?>
+		<?php $no=1; foreach (getPesertaByKejuruan() as $data){ ?>
 			<tr>
 				<td><?= $no++ ?></td>
 				<td><?= __generatorID($data['ID_KEJURUAN']).'-'.$data['ID_PESERTA'] ?></td>
@@ -23,7 +23,7 @@
 				<td align="center"><?= $retVal = ($data['STATUS'] == 0) ? 'Tidak Lulus' : 'Lulus'; ?></td>
 				<td align="center"><?= $data['TAHUN'] ?></td>
 			</tr>
-		<?php endforeach ?>
+		<?php } ?>
 		</tbody>
 	</table>
 

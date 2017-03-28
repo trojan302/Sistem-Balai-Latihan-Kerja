@@ -1,4 +1,7 @@
-<?php if (isset($_GET['delete'])) { deletePeserta($_GET['delete']); } ?>
+<?php if (isset($_GET['delete'])) { 
+	echo deletePeserta($_GET['delete']); 
+
+} ?>
 <div class="row">
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
@@ -22,8 +25,8 @@
 			<th>Nama</th>
 			<th>Alamat</th>
 			<th>Status Peserta</th>
-			<th>Date Registers</th>
-			<th>Options</th>
+			<th>Tanggal Daftar</th>
+			<th>Pilihan</th>
 		</tr>
 	</thead>
 	<tbody>

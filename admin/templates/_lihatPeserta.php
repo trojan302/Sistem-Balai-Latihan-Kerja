@@ -1,7 +1,7 @@
 <?php 
 
 if (!isset($_GET['lihat'])) {
-	header('Location: http://localhost/project_blk/admin/peserta');
+	header('Location: http://localhost/project_blk/v.1.0.3/admin/peserta');
 }
 
 $lihat = getCurrentPeserta($_GET['lihat']);

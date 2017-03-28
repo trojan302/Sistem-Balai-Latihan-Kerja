@@ -14,7 +14,9 @@ if (isset($_POST['daftar'])) {
 	$nama 				= $_POST['nama'];
 	$nik 				= $_POST['nik'];
 	$kejuruan			= $_POST['kejuruan'];
-	$ttl 				= $_POST['ttl'];
+	$tempat				= $_POST['tempat'];
+	$tanggal_lahir		= $_POST['tanggal_lahir'];
+	$ttl 				= $tempat.', '.$tanggal_lahir;
 	$jenis_kelamin 		= $_POST['jenis_kelamin'];
 	$skawin		 		= $_POST['skawin'];
 	$pendidikan	 		= $_POST['pendidikan'];
@@ -33,8 +35,8 @@ if (isset($_POST['daftar'])) {
 
 	$maxSize 			= 10000000;
 
-	$uriIjazah 			= "http://localhost/project_blk/libs/ijazah/";
-	$uriKtp 			= "http://localhost/project_blk/libs/ktp/";
+	$uriIjazah 			= "http://localhost/project_blk/v.1.0.3/libs/ijazah/";
+	$uriKtp 			= "http://localhost/project_blk/v.1.0.3/libs/ktp/";
 
 	$filenameijazah		= $uriIjazah."ijazah-user-".date('d-m-Y')."-0".$kejuruan."-".strtolower(str_replace(' ','-',$nama));
 	$filenamektp		= $uriKtp."ktp-user-".date('d-m-Y')."-0".$kejuruan."-".strtolower(str_replace(' ','-',$nama));
@@ -65,12 +67,16 @@ if (isset($_POST['daftar'])) {
 	$toDirKtp 			= str_replace($uriKtp, $pathKtp, $ktpUpload);
 
 
-	$sqlCheck = "SELECT nama, nik, DATE_FORMAT(tanggalDaftar, '%Y') AS Mendaftar FROM peserta WHERE nama='$nama' OR (nama LIKE '%$nama%');";
+	$sqlCheck = "SELECT nama, nik, DATE_FORMAT(tanggalDaftar, '%Y') AS Mendaftar FROM peserta WHERE nama='$nama' OR (nama LIKE '%$nama%') AND nik = '%$nik%';";
 	$queryRes = mysql_query($sqlCheck);
 	$rows = mysql_num_rows($queryRes);
 	$result = mysql_fetch_assoc($queryRes);
 
-	if ($nama == $result['nama'] || $nik == $result['nik'] || $tahunDaftar == $result['Mendaftar']) {
+	$cekNama 	= strpos($nama, $result['nama']);
+	$cekNik  	= strrpos($nik, $result['nik']);
+	$cekTahun 	= strrpos($tahunDaftar, $result['nik']);
+
+	if ($cekNama == true|| $cekNik == true || $cekTahun == true) {
 
 		$error = "Pendaftaran Gagal! Peserta dengan nama : ".$result['nama'].", $nama, etc sudah mendaftar pada : $tanggalDaftar.";
 		header('Location: ../pendaftaran.php?err='. urlencode($error));

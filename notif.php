@@ -33,7 +33,7 @@ function generatorUsers($id){
 
 }
 
-$username = generatorUsers($_SESSION['daftar'])['username'];
+$username = generatorUsers($_SESSION['daftar']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +45,7 @@ $username = generatorUsers($_SESSION['daftar'])['username'];
     <meta name="author" content="Betta Dev Indonesia | Github : @trojan302 | Fanspage : @bettadevindonesia">
 
     <title>Balai Latihan Kerja | PEMKAB Magelang</title>
-    <link rel="icon" href="http://localhost/project_blk/libs/photos/icon_blk.png">
+    <link rel="icon" href="http://localhost/project_blk/v.1.0.3/libs/photos/icon_blk.png">
     <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./libs/fonts/css/font-awesome.min.css">
     <link href="./libs/style.css" rel="stylesheet">
@@ -65,14 +65,14 @@ $username = generatorUsers($_SESSION['daftar'])['username'];
 		        
 	<?php } ?>
 
-	<a href="http://localhost/project_blk/">Back to Home</a>
+	<a href="http://localhost/project_blk/v.1.0.3/">Back to Home</a>
 	<hr>
 
 
 	<div class="jumbotron text-center">
 		
 		<h2>PENTING !!!</h2>
-		<p>Anda Terdaftar sebagai user <code><?= $username; ?></code> dengan password sementara yang sama. Tetapi anda belum bisa login untuk sekarang ini karena menunggu hasil seleksi dari panitia.</p>
+		<p>Anda Terdaftar sebagai user <code><?= $username['username']; ?></code> dengan password sementara yang sama. Tetapi anda belum bisa login untuk sekarang ini karena menunggu hasil seleksi dari panitia.</p>
 		<p>Silahkan klik <a target="_blank" href="print?print=bukti_daftar&id=<?= $_SESSION['daftar'] ?>" class="btn btn-default"><i class="glyphicon glyphicon-print"></i> Print</a></p>
 		<br><br><br>
 		Terimakasih

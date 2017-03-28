@@ -3,6 +3,6 @@
 session_start();
 session_destroy();
 
-header('Location: ../index');
+header('Location: http://localhost/project_blk/v.1.0.3/index');
 
 ?>

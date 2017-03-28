@@ -10,8 +10,8 @@ if (isset($_GET['file'])) {
     $query = mysql_query($sql);
     $result = mysql_fetch_assoc($query);
 
-    $filename = str_replace('http://localhost/project_blk/libs/materi/','../libs/materi/',$result['fileMateri']);
-    $file = str_replace('http://localhost/project_blk/libs/materi/','', $result['fileMateri']);
+    $filename = str_replace('http://localhost/project_blk/v.1.0.3/libs/materi/','../libs/materi/',$result['fileMateri']);
+    $file = str_replace('http://localhost/project_blk/v.1.0.3/libs/materi/','', $result['fileMateri']);
     $fileexts       = pathinfo($file);
     $basename       = $fileexts['basename'];
     $filename       = $fileexts['filename'];
@@ -21,7 +21,7 @@ if (isset($_GET['file'])) {
     echo $mime;
 
     // header yang menunjukkan nama file yang akan didownload
-    header("Content-Disposition: attachment; filename=".$basename);
+    header("Content-Disposition: attachment; filename=".$basename.'.'.$ext);
 
     // header yang menunjukkan ukuran file yang akan didownload
     header("Content-length: ".$result['size']);
@@ -40,7 +40,7 @@ if (isset($_GET['file'])) {
     exit;
     
 }else{
-    header('Location: http://localhost/project_blk/user/materi');
+    header('Location: http://localhost/project_blk/v.1.0.3/user/materi');
 }
 
 ?>

@@ -1,6 +1,6 @@
 <div class="starter-template">
 
-	<h1><i class="glyphicon glyphicon-book"></i> Dashboard</h1>
+	<h1><i class="glyphicon glyphicon-book"></i> Halaman Materi</h1>
 	<div class="row">
 		
 		<?php require '_sideBarStaf.php'; ?>

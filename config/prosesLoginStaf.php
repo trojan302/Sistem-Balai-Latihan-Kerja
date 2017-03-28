@@ -19,22 +19,22 @@ if (isset($_POST['loginStaf'])) {
 
 			$_SESSION['stafID'] = $arr['stafID'];
 
-			header('Location: ../staf/index');	
+			header('Location: http://localhost/project_blk/v.1.0.3/staf/index');	
 
 		}else{
 
 			$_SESSION['stafID'] = $arr['stafID'];
 
-			header('Location: ../pimpinan/index');
+			header('Location: http://localhost/project_blk/v.1.0.3/pimpinan/index');
 
 		}
 		
 	} else {
-		header('Location: ../loginStaf?err=' . urlencode('You dan\'t have permission!'));
+		header('Location: http://localhost/project_blk/v.1.0.3/loginStaf?err=' . urlencode('You dan\'t have permission!'));
 	}
 
 } else {
-	header('Location: ../loginStaf?err=' . urlencode('You dan\'t have permission!'));
+	header('Location: http://localhost/project_blk/v.1.0.3/loginStaf?err=' . urlencode('You dan\'t have permission!'));
 }
 
 ?>

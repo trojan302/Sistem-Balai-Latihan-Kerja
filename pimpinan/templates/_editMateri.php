@@ -25,7 +25,7 @@
 			    <input type="file" name="fileMateri" value="<?= $materi[0]['fileMateri'] ?>">
 			    <p class="help-block">
 			    File Sebelumnya : 
-			    <i><?= str_replace('http://anonymous/project_blk/libs/materi/','', $materi[0]['fileMateri']); ?></i>
+			    <i><?= str_replace('http://localhost/project_blk/v.1.0.3/libs/materi/','', $materi[0]['fileMateri']); ?></i>
 			    </p>
 			  </div>
 			  <input type="hidden" name="fileMateri" value="<?= $materi[0]['fileMateri'] ?>">

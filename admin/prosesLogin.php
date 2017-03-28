@@ -24,7 +24,7 @@ if (isset($_POST['login'])) {
 		header('Location: ./index');
 
 	}else{
-		header('Location: ./login.php?err=' . urlencode('You dan\'t have permission!'));
+		header('Location: http://localhost/project_blk/v.1.0.3/admin/login.php?err=' . urlencode('You dan\'t have permission!'));
 	}
 
 }

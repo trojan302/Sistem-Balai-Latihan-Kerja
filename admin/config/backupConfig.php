@@ -16,9 +16,9 @@ if (isset($_POST)) {
 	$run 		= mysql_query($sql);
 
 	if ($run) {
-		header('Location: http://localhost/project_blk/admin/backups?success='.urlencode('Setting Backup Database telah ditetapkan'));
+		header('Location: http://localhost/project_blk/v.1.0.3/admin/backups?success='.urlencode('Setting Backup Database telah ditetapkan'));
 	}else{
-		header('Location: http://localhost/project_blk/admin/backups?success='.urlencode('Setting Backup Database gagal ditetapkan'));
+		header('Location: http://localhost/project_blk/v.1.0.3/admin/backups?success='.urlencode('Setting Backup Database gagal ditetapkan'));
 	}
 
 }

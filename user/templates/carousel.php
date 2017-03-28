@@ -14,7 +14,7 @@
         <?php for ($i = 0; $i < $rows ; $i++) {
                 if ($i == 0){ ?>
         <div class="item active">
-          <img class="first-slide" src="http://localhost/project_blk/libs/photos/<?= $slides[$i]['filename'] ?>" alt="<?= $slides[$i]['judulSlides'] ?>">
+          <img class="first-slide" src="http://localhost/project_blk/v.1.0.3/libs/photos/<?= $slides[$i]['filename'] ?>" alt="<?= $slides[$i]['judulSlides'] ?>">
           <div class="container">
             <div class="carousel-caption">
               <h1><?= $slides[$i]['judulSlides'] ?></h1>
@@ -24,7 +24,7 @@
         </div>
         <?php }else{ ?>
         <div class="item">
-          <img class="first-slide" src="http://localhost/project_blk/libs/photos/<?= $slides[$i]['filename'] ?>" alt="<?= $slides[$i]['judulSlides'] ?>">
+          <img class="first-slide" src="http://localhost/project_blk/v.1.0.3/libs/photos/<?= $slides[$i]['filename'] ?>" alt="<?= $slides[$i]['judulSlides'] ?>">
           <div class="container">
             <div class="carousel-caption">
               <h1><?= $slides[$i]['judulSlides'] ?></h1>

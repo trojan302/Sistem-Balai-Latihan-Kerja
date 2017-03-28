@@ -39,7 +39,7 @@ $gelobangDitutup = strtotime('+2 weeks', $gelobangDibuka);
 <html>
 <head>
 	<title>Bukti Pendaftaran</title>
-	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://localhost/project_blk/v.1.0.3/node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<style>
 		body{
 			font-size: 11px;

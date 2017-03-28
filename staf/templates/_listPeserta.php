@@ -1,6 +1,6 @@
 <div class="starter-template">
 
-	<h1><i class="glyphicon glyphicon-book"></i> Dashboard</h1>
+	<h1><i class="glyphicon glyphicon-book"></i> Halaman Materi</h1>
 	<div class="row">
 		
 		<?php require '_sideBarStaf.php'; ?>
@@ -21,7 +21,7 @@
 			
 			<?php 
 
-			$sql = "SELECT kejuruan.nama_kejuruan AS KEJURUAN, peserta.nama AS NAMA_PESERTA FROM peserta INNER JOIN kejuruan ON peserta.id_kejuruan = kejuruan.id_kejuruan WHERE kejuruan.id_kejuruan='".$_GET['staf_kejuruan']."'";
+			$sql = "SELECT peserta.nama AS NAMA, kejuruan.nama_kejuruan AS KEJURUAN, staf_blk.nama AS STAF FROM peserta, kejuruan, staf_blk WHERE kejuruan.id_kejuruan = '".$staf['id_kejuruan']."' AND staf_blk.id_kejuruan = '".$staf['id_kejuruan']."' AND peserta.id_kejuruan = '".$staf['id_kejuruan']."'";
 			$query = mysql_query($sql);
 			$row = mysql_num_rows($query);
 			$no=1;
@@ -40,9 +40,9 @@
 					<?php while ($result = mysql_fetch_assoc($query)) { ?>
 						<tr>
 							<td><?= $no++ ?></td>
-							<td><?= $result['NAMA_PESERTA'] ?></td>
+							<td><?= $result['NAMA'] ?></td>
 							<td><?= $result['KEJURUAN'] ?></td>
-							<td><?= $_GET['list_peserta'] ?></td>
+							<td><?= $result['STAF'] ?></td>
 						</tr>
 					<?php } ?>
 				</tbody>

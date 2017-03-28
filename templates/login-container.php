@@ -9,7 +9,7 @@
         </div>
         <?php } ?>
         
-        <form action="http://localhost/project_blk/config/prosesLogin.php" method="POST">
+        <form action="http://localhost/project_blk/v.1.0.3/config/prosesLogin.php" method="POST">
             <form>
               <div class="input-group input-group-md">
                 <span class="input-group-addon" id="sizing-addon">

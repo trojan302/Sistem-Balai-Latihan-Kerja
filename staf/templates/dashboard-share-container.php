@@ -1,13 +1,13 @@
 <div class="starter-template">
 	
-	<h1><i class="glyphicon glyphicon-book"></i> Dashboard</h1>
+	<h1><i class="glyphicon glyphicon-book"></i> Halaman Materi</h1>
 	<div class="row">
 		
 		<?php require '_sideBarStaf.php'; ?>
 
 		<div class="col-lg-8 col-md-9 col-sm-8">
 
-			<h2>Share Materi</h2>
+			<h2>Bagi Materi</h2>
 			<hr>
 
 			<form method="POST" action="<?= $url ?>staf/config/prosesUploadMateri.php" enctype="multipart/form-data">
