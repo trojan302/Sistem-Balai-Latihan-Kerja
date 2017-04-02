@@ -4,9 +4,9 @@ if (isset($_GET['filename'])) {
 
     $file = $_GET['filename'];
 
-    $filename = str_replace('http://localhost/project_blk/v.1.0.3/admin/database/','./database/',$file);
-    $fileinfo = str_replace('http://localhost/project_blk/v.1.0.3/admin/database/','', $file);
-    $fileexts       = pathinfo($fileinfo);
+    // $filename = str_replace('http://localhost/project_blk/v.1.0.3/admin/database/','./database/',$file);
+    // $fileinfo = str_replace('http://localhost/project_blk/v.1.0.3/admin/database/','', $file);
+    $fileexts       = pathinfo($file);
     $basename       = $fileexts['basename'];
     $filename       = $fileexts['filename'];
     $ext            = $fileexts['extension'];
@@ -18,7 +18,7 @@ if (isset($_GET['filename'])) {
     header("Content-Disposition: attachment; filename=".$basename.'.'.$ext);
 
     // header yang menunjukkan ukuran file yang akan didownload
-    header("Content-length: ".$result['size']);
+    header("Content-length: ".$fileexts['size']);
 
     // header yang menunjukkan jenis file yang akan didownload
     header("Content-type: ".$mime);

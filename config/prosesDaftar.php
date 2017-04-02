@@ -9,6 +9,66 @@ define('DBMS', 'project_blk');
 mysql_connect(HOST,USER,PASS)or die('Server not connected!');
 mysql_select_db(DBMS)or die('Database not selected!');
 
+
+function is_register($nik, $nama){
+
+	$sql = "SELECT * FROM peserta WHERE nik='".$nik."'";
+	$run = mysql_query($sql);
+	$row = mysql_num_rows($run);
+	$msg = '';
+
+	if ($row > 0) {
+		
+		$sql = "SELECT * FROM peserta WHERE nama='".$nama."'";
+		$run = mysql_query($sql);
+		$row = mysql_num_rows($run);
+
+		if ($row > 0) {
+			
+			$msg .= true;
+
+		}else{
+
+			$sql = "SELECT * FROM peserta WHERE nik='".$nik."'";
+			$run = mysql_query($sql);
+			$row = mysql_num_rows($run);
+
+			if ($row > 0) {
+				$msg .= true;
+			}else{
+				$msg .= false;
+			}
+
+		}
+
+	}else{
+
+		$sql = "SELECT * FROM peserta WHERE nama='".$nama."'";
+		$run = mysql_query($sql);
+		$row = mysql_num_rows($run);
+
+		if ($row > 0) {
+			$msg .= true;
+		}else{
+			
+			$sql = "SELECT * FROM peserta WHERE nik='".$nik."'";
+			$run = mysql_query($sql);
+			$row = mysql_num_rows($run);
+
+			if ($row > 0) {
+				$msg .= true;
+			}else{
+				$msg .= false;
+			}
+
+		}
+	}
+
+	return $msg;
+
+}
+
+
 if (isset($_POST['daftar'])) {
 	
 	$nama 				= $_POST['nama'];
@@ -66,19 +126,9 @@ if (isset($_POST['daftar'])) {
 	$ktpUpload 			= str_replace($realnamektp[0], $filenamektp , $filektp);
 	$toDirKtp 			= str_replace($uriKtp, $pathKtp, $ktpUpload);
 
+	if (is_register($nik, $nama) == 1) {
 
-	$sqlCheck = "SELECT nama, nik, DATE_FORMAT(tanggalDaftar, '%Y') AS Mendaftar FROM peserta WHERE nama='$nama' OR (nama LIKE '%$nama%') AND nik = '%$nik%';";
-	$queryRes = mysql_query($sqlCheck);
-	$rows = mysql_num_rows($queryRes);
-	$result = mysql_fetch_assoc($queryRes);
-
-	$cekNama 	= strpos($nama, $result['nama']);
-	$cekNik  	= strrpos($nik, $result['nik']);
-	$cekTahun 	= strrpos($tahunDaftar, $result['nik']);
-
-	if ($cekNama == true|| $cekNik == true || $cekTahun == true) {
-
-		$error = "Pendaftaran Gagal! Peserta dengan nama : ".$result['nama'].", $nama, etc sudah mendaftar pada : $tanggalDaftar.";
+		$error = "Pendaftaran Gagal! Peserta sudah terdaftar";
 		header('Location: ../pendaftaran.php?err='. urlencode($error));
 
 	}else{

@@ -26,7 +26,7 @@
 				    <label>Tempat, Tanggal Lahir*</label>
 				    <br>
 				      <input type="text" class="form-control" style="width: 60%;float: left;" placeholder="Tempat Lahir" name="tempat" required>
-				    <input type="date" id="datepicker" class="form-control" style="width: 40%;float: left;" placeholder="Tempat, Tanggal Lahir" name="tanggal_lahir" required>
+				    <input type="text" id="datepicker" class="form-control" style="width: 40%;float: left;" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
 					<div class="clearfix"></div>
 				  </div>
 

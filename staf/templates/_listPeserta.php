@@ -21,7 +21,7 @@
 			
 			<?php 
 
-			$sql = "SELECT peserta.nama AS NAMA, kejuruan.nama_kejuruan AS KEJURUAN, staf_blk.nama AS STAF FROM peserta, kejuruan, staf_blk WHERE kejuruan.id_kejuruan = '".$staf['id_kejuruan']."' AND staf_blk.id_kejuruan = '".$staf['id_kejuruan']."' AND peserta.id_kejuruan = '".$staf['id_kejuruan']."'";
+			$sql = "SELECT peserta.nama AS NAMA, kejuruan.nama_kejuruan AS KEJURUAN, staf_blk.nama AS STAF FROM peserta, kejuruan, staf_blk WHERE kejuruan.id_kejuruan = '".$staf['id_kejuruan']."' AND staf_blk.id_kejuruan = '".$staf['id_kejuruan']."' AND peserta.id_kejuruan = '".$staf['id_kejuruan']."' AND peserta.status_peserta!=1";
 			$query = mysql_query($sql);
 			$row = mysql_num_rows($query);
 			$no=1;

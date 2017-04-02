@@ -12,9 +12,9 @@ $query = "UPDATE `gelombang` SET `nama`='$GelombangNama', `kuota`='$GelombangKuo
 $sql = mysql_query($query);
 
 if ($sql) {
-	header('Location: http://localhost/project_blk/admin/kejuruan?edit='.$GelombangID.'&success='.urlencode('Data Berhasil diupdate!'));
+	header('Location: http://localhost/project_blk/v.1.0.3/admin/kejuruan?edit='.$GelombangID.'&success='.urlencode('Data Berhasil diupdate!'));
 }else{
-	header('Location: http://localhost/project_blk/admin/kejuruan?edit='.$GelombangID.'&err='.urlencode('Data Gagal diupdate!'));
+	header('Location: http://localhost/project_blk/v.1.0.3/admin/kejuruan?edit='.$GelombangID.'&err='.urlencode('Data Gagal diupdate!'));
 }
 
 ?>
