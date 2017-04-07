@@ -8,7 +8,7 @@ if (isset($_POST)) {
 	
 	echo "<pre>",print_r($_POST),"</pre>";
 
-	$jadwal 	= $_POST['tanggalBackup']."-".$_POST['bulanBackup']."-".$_POST['backupTahun'];
+	$jadwal 	= $_POST['waktuBackup'];
 	$namaFile 	= $_POST['namaFile'];
 	$created 	= date('d-m-Y H:i:s');
 

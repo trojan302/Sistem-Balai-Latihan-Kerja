@@ -10,6 +10,12 @@
     <script type="text/javascript" src="http://localhost/project_blk/v.1.0.3/libs/js/tableExport/jspdf/libs/base64.js"></script>
     <script type="text/javascript" src="http://localhost/project_blk/v.1.0.3/libs/js/tableExport/jspdf/libs/sprintf.js"></script>
     <script type="text/javascript" src="http://localhost/project_blk/v.1.0.3/libs/js/tableExport/tableExport.jquery.json"></script>
-    <script type="text/javascript" src="http://localhost/project_blk/v.1.0.3/admin/node_modules/admin.js"></script>    
+    <script type="text/javascript" src="http://localhost/project_blk/v.1.0.3/admin/node_modules/admin.js"></script>
+    <script src="http://localhost/project_blk/v.1.0.3/node_modules/jquery-ui.js"></script>
+    <script>
+        $(function() {
+          $( "#datepicker" ).datepicker();
+        });
+    </script>    
   </body>
 </html>

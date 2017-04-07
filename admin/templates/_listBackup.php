@@ -26,7 +26,7 @@
             <td><?= $data['jadwal'] ?></td>
             <td><?= $data['created'] ?></td>
             <td>
-              <a href="?delete=<?= $data['idBackup'] ?>" class="btn btn-danger btn-xs" title="Hapus"><i class="glyphicon glyphicon-trash"></i></a>
+              <a href="?delete_jadwal=<?= $data['idBackup'] ?>" class="btn btn-danger btn-xs" title="Hapus"><i class="glyphicon glyphicon-trash"></i></a>
               <a href="" class="btn btn-success btn-xs" title="Edit"><i class="glyphicon glyphicon-pencil"></i></a>
             </td>
           </tr>

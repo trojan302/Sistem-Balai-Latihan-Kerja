@@ -37,8 +37,6 @@
             <div class="collapse" id="server">
               <div class="well">
                 <a style="display:block;line-height:30px;" href="http://localhost/project_blk/v.1.0.3/admin/backups"><i class="glyphicon glyphicon-cloud-download"></i> Backups Database</a>
-                <a style="display:block;line-height:30px;" href="http://localhost/project_blk/v.1.0.3/admin/backups?restore=true"><i class="glyphicon glyphicon-cloud-upload"></i> Restore Database</a>
-                <a style="display:block;line-height:30px;" href="http://localhost/project_blk/v.1.0.3/admin/backups?listBackup=true"><i class="glyphicon glyphicon-calendar"></i> Daftar Jadwal Backup</a>
               </div>
             </div>
           </ul>

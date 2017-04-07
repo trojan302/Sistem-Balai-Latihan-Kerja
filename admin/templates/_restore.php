@@ -29,8 +29,6 @@
             <tbody>
             <?php
 
-            date_default_timezone_set('Asia/Jakarta');
-
             if ($handle = opendir('database')) {
 
               $no=1;

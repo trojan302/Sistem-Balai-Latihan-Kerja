@@ -15,7 +15,7 @@ if (isset($_GET['filename'])) {
     echo $mime;
 
     // header yang menunjukkan nama file yang akan didownload
-    header("Content-Disposition: attachment; filename=".$basename.'.'.$ext);
+    header("Content-Disposition: attachment; filename=".$basename);
 
     // header yang menunjukkan ukuran file yang akan didownload
     header("Content-length: ".$fileexts['size']);
@@ -25,7 +25,7 @@ if (isset($_GET['filename'])) {
 
     // proses membaca isi file yang akan didownload dari folder
     $fp  = fopen("./database/'".$basename, 'r');
-    $content = fread($fp, filesize('./database/'.$basename.'.'.$ext));
+    $content = fread($fp, filesize('./database/'.$basename));
     fclose($fp);
 
     // menampilkan isi file yang akan didownload

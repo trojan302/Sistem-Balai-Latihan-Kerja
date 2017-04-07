@@ -13,6 +13,7 @@
     <link href="http://localhost/project_blk/v.1.0.3/admin/node_modules/dashboard.css" rel="stylesheet">
     <link rel="stylesheet" href="http://localhost/project_blk/v.1.0.3/node_modules/jquery.dataTables.min.css">
     <link rel="stylesheet" href="http://localhost/project_blk/v.1.0.3/node_modules/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="http://localhost/project_blk/v.1.0.3/node_modules/jquery-ui.css">
     <style>
       body{
         overflow-x: hidden;

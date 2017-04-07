@@ -11,9 +11,9 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/jquery-ui.js"></script>
     <script>
-      $(function() {
-        $( "#datepicker" ).datepicker();
-      });
-</script>
+        $(function() {
+          $( "#datepicker" ).datepicker();
+        });
+    </script>
   </body>
 </html>
