@@ -24,6 +24,14 @@ Fitur Sistem
 
 ![enter image description here](https://lh3.googleusercontent.com/-lIaY96MJXz8/WNa3uhr2uMI/AAAAAAAABsQ/zzA93wRgOd0bHwl5U_1VEqmTy6s0NoDaACLcB/s0/screenshot-5.png "screenshot-5.png")
 
+Setelah mendaftar, peserta akan diarahka ke landing page sebagai pemberitahuan tentang alur pendaftaran dan penerimaan.
+
+![enter image description here](https://lh3.googleusercontent.com/-rVJl0D3kzyA/WOf06LOu6EI/AAAAAAAABuo/1LAuMlu_udg9C-10ogFGG8cX9XzRT5rvwCLcB/s0/screenshot-6.png "screenshot-6.png")
+
+Tombol [-- print --] akan meredirect calon peserta untuk melihat bukti pendaftaran berupa file PDF yang bisa dicetak.
+
+![enter image description here](https://lh3.googleusercontent.com/-E_kZ2oJPB-U/WOf1W8gWLJI/AAAAAAAABuw/hOJnSH509RM1SSEfvQ4oVvmifKc0JF6DACLcB/s0/screenshot-7.png "screenshot-7.png")
+
 #### <i class="icon-lock"></i> Sistem Login
 
  - Login Peserta
@@ -49,7 +57,6 @@ Jika anda ingin mendownload project ini atau ingin mengembangkannya silahkan hub
 
 <kbd><i class="icon-mail"></i> Email 1 : bettadevindonesia@gmail.com</kbd>
 <kbd><i class="icon-mail"></i>  Email 2 : trojan302@gmail.com</kbd>
-<kbd><i class="icon-mail"></i>  Email 3 : imamalimustofa01@gmail.com</kbd>
 
 <i class="icon-right-hand"></i> Telepon / SMS
 
