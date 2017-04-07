@@ -1,0 +1,33 @@
++=========================================================================================+
+|				   CHANGE LOG FILE					  |
++=========================================================================================+
+
+trojan302 - Fix Backup Systems - Sat, 8 Apr 2017 03:25:23 +0700
+trojan302 - Fix Backup Systems - Sat, 8 Apr 2017 03:08:42 +0700
+trojan302 - Fix redundancies - Sun, 2 Apr 2017 12:01:03 +0700
+trojan302 - Fix redundancies - Sun, 2 Apr 2017 11:58:37 +0700
+trojan302 - Fix errors - Wed, 29 Mar 2017 00:51:29 +0700
+trojan302 - Modif README.md - Sun, 26 Mar 2017 02:24:08 +0700
+trojan302 - Modif README.md - Sun, 26 Mar 2017 01:54:19 +0700
+trojan302 - Modif README.md - Sun, 26 Mar 2017 01:51:58 +0700
+trojan302 - Revisi Belakangan Ini - Sun, 26 Mar 2017 00:43:45 +0700
+trojan302 - Secuil maning! - Tue, 14 Mar 2017 15:41:18 +0700
+trojan302 - Hampir Selesai - Tue, 14 Mar 2017 02:10:28 +0700
+trojan302 - Update again - Sun, 12 Mar 2017 12:17:48 +0700
+trojan302 - Updated Directory - Sat, 11 Mar 2017 03:31:50 +0700
+trojan302 - deleted - Wed, 8 Mar 2017 04:32:16 +0700
+trojan302 - --- - Wed, 8 Mar 2017 04:26:21 +0700
+trojan302 - Deleted - Wed, 8 Mar 2017 04:12:55 +0700
+trojan302 - Git - Wed, 8 Mar 2017 04:10:38 +0700
+trojan302 - Add ignore - Wed, 8 Mar 2017 04:02:16 +0700
+trojan302 - Add Git Ignore - Wed, 8 Mar 2017 03:58:31 +0700
+trojan302 - Add Git Ingnore - Wed, 8 Mar 2017 03:54:24 +0700
+trojan302 - Add Git Ingnore - Wed, 8 Mar 2017 03:51:18 +0700
+trojan302 - Add Git Ignore - Wed, 8 Mar 2017 03:47:59 +0700
+trojan302 - Updated File - Wed, 8 Mar 2017 03:32:18 +0700
+trojan302 - Deleting Ingrone - Mon, 6 Mar 2017 17:09:29 +0700
+trojan302 - ignoring directory - Mon, 6 Mar 2017 17:04:09 +0700
+trojan302 - ignoring directory - Mon, 6 Mar 2017 17:02:43 +0700
+trojan302 - Unstable Project - Mon, 6 Mar 2017 16:57:01 +0700
+trojan302 - Project Balai Latihan Kerja Kabupaten Maglang - Mon, 6 Mar 2017 16:56:56 +0700
+InternalError - Initial commit - Mon, 6 Mar 2017 16:38:45 +0700
