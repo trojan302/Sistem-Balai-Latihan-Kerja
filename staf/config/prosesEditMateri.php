@@ -12,9 +12,9 @@ function stafNama($stafID){
 
 }
 
-function fileAs($filePath, $judulMateri, $stafID, $kejuruan, $uploaded, $ext){
+function fileAs($judulMateri, $stafID, $kejuruan, $uploaded, $ext){
 
-	$result = $filePath.str_replace(' ', '_', $judulMateri).'-('.str_replace(' ', '_', stafNama($stafID)).'-'.str_replace(' ', '_', $kejuruan).')-'.$uploaded.'-'.date('His').'.'.$ext;
+	$result = str_replace(' ', '_', $judulMateri).'-('.str_replace(' ', '_', stafNama($stafID)).'-'.str_replace(' ', '_', $kejuruan).')-'.$uploaded.'-'.date('His').'.'.$ext;
 
 	return $result;
 
@@ -30,16 +30,41 @@ function updateDataServer($dataUpdated){
 
 }
 
-$purePath	 	= '../../libs/materi/'.str_replace('http://localhost/project_blk/v.1.0.3/libs/materi/','', $_POST['fileMateri']);
-$file 			= str_replace('http://localhost/project_blk/v.1.0.3/libs/materi/','', $_POST['fileMateri']);
-$judulMateri 	= $_POST['judulMateri'];
-$deskripsi 		= $_POST['deskripsi'];
-$materiID		= $_POST['materiID'];
-$stafID			= $_POST['stafID'];
-$kejuruan 		= $_POST['kejuruan'];
-$uploaded 		= date('d-m-Y');
+if (isset($_POST['editMateri'])) {
 
-if (file_exists($purePath)) {
+if (!empty($_FILES['fileMateri']['name'])) {
+
+	$purePath	 	= '../../libs/materi/'.str_replace('http://localhost/project_blk/v.1.0.3/libs/materi/','', $_FILES['fileMateri']['name']);
+	$filePath	 	= $_POST['judulMateri'];
+	$oldFile     	= $_POST['fileMateri'];
+
+	$file 			= 'http://localhost/project_blk/v.1.0.3/libs/materi/'. $_FILES['fileMateri']['name'];
+	$judulMateri 	= $_POST['judulMateri'];
+	$deskripsi 		= $_POST['deskripsi'];
+	$materiID		= $_POST['materiID'];
+	$stafID			= $_POST['stafID'];
+	$kejuruan 		= $_POST['kejuruan'];
+	$uploaded 		= date('Y-m-d');
+	$filetype  		= $_FILES['fileMateri']['type'];
+	$filesize 		= $_FILES['fileMateri']['size'];
+	$filetmp 		= $_FILES['fileMateri']['tmp_name'];
+	$fileinfo		= pathinfo($_FILES['fileMateri']['name']);
+	$ext 			= $fileinfo['extension'];
+
+	$move 	= '../../libs/materi/'.fileAs($judulMateri, $stafID, $kejuruan, $uploaded, $ext);
+	$remove = '../../libs/materi/'.str_replace('http://localhost/project_blk/v.1.0.3/libs/materi/','',$oldFile);
+
+	$fileToServer = 'http://localhost/project_blk/v.1.0.3/libs/materi/'.fileAs($judulMateri, $stafID, $kejuruan, $uploaded, $ext);
+
+	$data = array(
+		"judulMateri" => $judulMateri,
+		"fileMateri" => $fileToServer,
+		"deskripsi" => $deskripsi,
+		"uploaded" => $uploaded,
+		"extension" => $ext,
+		"size" => $filesize,
+		"materiID" => $materiID
+	);
 
 	$type = array(
 		// .docx Office Document (Ubuntu / Linux)
@@ -58,68 +83,43 @@ if (file_exists($purePath)) {
 		"application/vnd.ms-excel"
 	);
 
-	$filePath 		= "../../libs/materi/";
-
-	$filetype		= mime_content_type($purePath);
-	$filesize 		= $_POST['size'];
-	$fileexts 		= pathinfo($file);
-	$ext 			= $fileexts['extension'];
-
 	if (in_array($filetype, $type)) {
+		
+		$update = updateDataServer($data);
 
-		if ($filesize < 10000000) {
-
-			$pathUpload = fileAs($filePath, $judulMateri, $stafID, $kejuruan, $uploaded, $ext);
-
-			$dataUpdated = array(
-				'judulMateri' => $judulMateri,
-				'fileMateri' => str_replace('../../','http://localhost/project_blk/v.1.0.3/', $pathUpload),
-				'deskripsi' => $deskripsi,
-				'uploaded' => date('Y-m-d'),
-				'extension' => $ext,
-				'size' => $filesize,
-				'materiID' => $materiID 
-			);
-
-			rename($purePath, $pathUpload);
+		if ($update == true) {
 			
-			$sukses = updateDataServer($dataUpdated);
+			move_uploaded_file($filetmp, $move);
+			unlink($remove);
 
-			if ($sukses == true) {
-				echo "Data sukses diupdate";
-			}else{
-				echo "Data gagal diupdate";
-			}
+			header('Location: http://localhost/project_blk/v.1.0.3/staf/dashboard?success='. urlencode('File sukses diupdate'));
 
 		}else{
-
-			header('Location: http://localhost/project_blk/v.1.0.3/staf/dashboard?err='. urlencode('File tidak boleh lebih dari 10 MB'));
-
+			header('Location: http://localhost/project_blk/v.1.0.3/staf/dashboard?err='. urlencode('File gagal diupdate'));
 		}
 
-	}else{
-
-		header('Location: http://localhost/project_blk/v.1.0.3/staf/dashboard?err='. urlencode('Ektensi yang diijinkan hanya (.docx, .pptx, .xlsx, .pdf, .doc, .ptt, .xls)'));
 	}
-	
-	// $sql = "UPDATE materi SET judulMateri='$judulMateri', deskripsi='$deskripsi', fileMateri='$file' WHERE materiID='$materiID'";
-
-	// echo $sql;
 
 }else{
 
-	$filePath 		= "../../libs/materi/";
-	
-	$filetype 		= $_FILES['fileMateri']['type'];
-	$filename 		= $_FILES['fileMateri']['name'];
-	$filesize 		= $_FILES['fileMateri']['size'];
-	$filetmp 		= $_FILES['fileMateri']['tmp_name'];
+	$file 			= $_POST['fileMateri'];
+	$judulMateri 	= $_POST['judulMateri'];
+	$deskripsi 		= $_POST['deskripsi'];
+	$materiID		= $_POST['materiID'];
+	$stafID			= $_POST['stafID'];
+	$kejuruan 		= $_POST['kejuruan'];
+	$size 			= $_POST['size'];
+	$uploaded 		= date('d-m-Y');
 
-	$fileexts 		= pathinfo($_FILES['fileMateri']['name']);
-	$ext 			= $fileexts['extension'];
+	$sql = mysql_query("UPDATE materi SET judulMateri='$judulMateri', deskripsi='$deskripsi', fileMateri='$file' WHERE materiID='$materiID'");
 
-	echo "File tidak ada";
+	if ($sql) {
+		header('Location: http://localhost/project_blk/v.1.0.3/staf/dashboard?success='. urlencode('File sukses diupdate'));
+	}else{
+		header('Location: http://localhost/project_blk/v.1.0.3/staf/dashboard?err='. urlencode('File gagal diupdate'));
+	}
 }
 
+}
 
 ?>

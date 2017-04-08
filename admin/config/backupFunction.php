@@ -6,6 +6,7 @@ function backup_tables($host, $user, $pass, $name, $tables = '*'){
           "\n  HOST: {$host}".
           "\n  DATABASE: {$name}".
           "\n  TABLES: {$tables}".
+          "\n  Backup By: Betta Dev Indonesia".
           "\n  ---------------------------------------------------------------*/\n";
   $link = mysql_connect($host,$user,$pass);
   mysql_select_db($name,$link);

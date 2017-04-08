@@ -308,6 +308,16 @@ function getCurrentFeatures($id){
 
 }
 
+function begining(){
+
+	$query = "SELECT * FROM `features` ORDER BY idFeatures ASC LIMIT 1";
+	$sql = mysql_query($query);
+	$result = mysql_fetch_assoc($sql);
+
+	return $result;
+
+}
+
 function getAllVisiMisi(){
 
 	$query = "SELECT * FROM `visimisi`";

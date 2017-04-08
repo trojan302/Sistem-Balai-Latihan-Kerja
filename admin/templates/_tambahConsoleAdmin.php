@@ -1,7 +1,14 @@
 <h2>Tambah Features</h2>
 <hr>
 
-<form action="" class="form-group" enctype="multipart/form-data" method="post">
+<?php
+
+$sql = mysql_query("SELECT idAdmin FROM admin WHERE emailAdmin='".$_SESSION['login']."'");
+$res = mysql_fetch_assoc($sql);
+
+?>
+
+<form action="<?= $url ?>admin/config/featureProses.php" class="form-group" method="post" enctype="multipart/form-data">
   
   <label>Judul Features</label>
   <input type="text" name="judulFeature" class="form-control" required>
@@ -13,11 +20,10 @@
 
   <label>Gambar Features</label>
   <input type="file" name="images" class="form-control">
-  
-  <input type="hidden" name="idFeatures">
-  <input type="hidden" name="idAdmin">
+
+  <input type="hidden" name="idAdmin" value="<?= $res['idAdmin'] ?>">
   <br>
 
-  <input type="submit" name="editFeature" value="Tambah Feature" class="btn btn-info">
+  <input type="submit" name="addFeature" value="Tambah Feature" class="btn btn-info">
 
 </form>

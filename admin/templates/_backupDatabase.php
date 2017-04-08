@@ -36,41 +36,46 @@
 
           if (isset($_FILES['dataRestore']['name'])) {
 
-              // Name of the file
-              $filename = 'database/'.$_FILES['dataRestore']['name'];
-              // MySQL host
+              $fileUpload = './database/tmp/'.$_FILES['dataRestore']['name'];
+              $fileTmp    = $_FILES['dataRestore']['tmp_name'];
+
+              move_uploaded_file($fileTmp, $fileUpload);
+
+              
               $mysql_host = 'localhost';
-              // MySQL username
+      
               $mysql_username = 'root';
-              // MySQL password
+      
               $mysql_password = '';
-              // Database name
-              $mysql_database = 'test';
-              // Connect to MySQL server
+      
+              $mysql_database = 'project_blk';
+      
               mysql_connect($mysql_host, $mysql_username, $mysql_password) or die('Error connecting to MySQL server: ' . mysql_error());
-              // Select database
+      
               mysql_select_db($mysql_database) or die('Error selecting MySQL database: ' . mysql_error());
-              // Temporary variable, used to store current query
+      
               $templine = '';
-              // Read in entire file
-              $lines = file($filename);
-              // Loop through each line
+      
+              $lines = file($fileUpload);
+      
               foreach ($lines as $line)
               {
-              // Skip it if it's a comment
+      
               if (substr($line, 0, 2) == '/*--' || $line == '' || substr($line, 0, 2) == '--*/')
                   continue;
-              // Add this line to the current segment
+      
               $templine .= $line;
-              // If it has a semicolon at the end, it's the end of the query
+      
               if (substr(trim($line), -1, 1) == ';')
               {
-                  // Perform the query
+          
                   mysql_query($templine) or print('Error performing query \'<strong>' . $templine . '\': ' . mysql_error() . '<br /><br />');
-                  // Reset temp variable to empty
+          
                   $templine = '';
               }
               }
+
+              unlink($fileUpload);
                echo "<strong>Tables imported successfully</strong>";
            }
 
@@ -114,7 +119,7 @@
 
                 while (false !== ($filename = readdir($handle))) {
 
-                    if ($filename != "." && $filename != "..") {
+                    if ($filename != "." && $filename != ".." && $filename != "tmp") {
             ?>
 
             

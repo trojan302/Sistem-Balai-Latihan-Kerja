@@ -34,16 +34,16 @@ if (isset($_POST['tambahStaf'])) {
 			$sql = mysql_query($query);
 
 			if ($sql) {
-				header('Location: http://localhost/project_blk/admin/staf?_tambahStaf&success='.urlencode('Data berhasil ditambahkan'));
+				header('Location: http://localhost/project_blk/v.1.0.3/admin/staf?_tambahStaf&success='.urlencode('Data berhasil ditambahkan'));
 			}else{
-				header('Location: http://localhost/project_blk/admin/staf?_tambahStaf&success='.urlencode('Data gagal ditambahkan'));
+				header('Location: http://localhost/project_blk/v.1.0.3/admin/staf?_tambahStaf&success='.urlencode('Data gagal ditambahkan'));
 			}
 
 		}
 
 	}else{
 
-		header('Location: http://localhost/project_blk/admin/staf?_tambahStaf&err='.urlencode('Data gagal ditambahkan'));
+		header('Location: http://localhost/project_blk/v.1.0.3/admin/staf?_tambahStaf&err='.urlencode('Data gagal ditambahkan'));
 
 	}
 	
@@ -77,9 +77,9 @@ if (isset($_POST['editStaf'])) {
 			$sql = mysql_query($query);
 
 			if ($sql) {
-				header('Location: http://localhost/project_blk/admin/staf?_tambahStaf&success='.urlencode('Data berhasil idupdate'));
+				header('Location: http://localhost/project_blk/v.1.0.3/admin/staf?_tambahStaf&success='.urlencode('Data berhasil idupdate'));
 			}else{
-				header('Location: http://localhost/project_blk/admin/staf?_tambahStaf&success='.urlencode('Data gagal idupdate'));
+				header('Location: http://localhost/project_blk/v.1.0.3/admin/staf?_tambahStaf&success='.urlencode('Data gagal idupdate'));
 			}
 
 	}else{
@@ -95,15 +95,15 @@ if (isset($_POST['editStaf'])) {
 				$sql = mysql_query($query);
 
 				if ($sql) {
-					header('Location: http://localhost/project_blk/admin/staf?_tambahStaf&success='.urlencode('Data berhasil idupdate'));
+					header('Location: http://localhost/project_blk/v.1.0.3/admin/staf?_tambahStaf&success='.urlencode('Data berhasil idupdate'));
 				}else{
-					header('Location: http://localhost/project_blk/admin/staf?_tambahStaf&success='.urlencode('Data gagal idupdate'));
+					header('Location: http://localhost/project_blk/v.1.0.3/admin/staf?_tambahStaf&success='.urlencode('Data gagal idupdate'));
 				}
 
 			}
 		}else{
 
-			header('Location: http://localhost/project_blk/admin/staf?_tambahStaf&err='.urlencode('Data gagal idupdate'));
+			header('Location: http://localhost/project_blk/v.1.0.3/admin/staf?_tambahStaf&err='.urlencode('Data gagal idupdate'));
 
 		}
 	}

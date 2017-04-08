@@ -26,11 +26,11 @@ if (isset($_POST['slide1'])) {
 
             if ($sql) {
               
-              header('Location: http://localhost/project_blk/admin/homepage?success='. urlencode('Gambar Untuk silde 1 berhasil di update!'));
+              header('Location: http://localhost/project_blk/v.1.0.3/admin/homepage?success='. urlencode('Gambar Untuk silde 1 berhasil di update!'));
 
             }else{
               
-              header('Location: http://localhost/project_blk/admin/homepage?err='. urlencode('Gambar Untuk silde 1 gagal di update!'));
+              header('Location: http://localhost/project_blk/v.1.0.3/admin/homepage?err='. urlencode('Gambar Untuk silde 1 gagal di update!'));
 
             }
 
@@ -44,11 +44,11 @@ if (isset($_POST['slide1'])) {
 
         if ($sql) {
           
-          header('Location: http://localhost/project_blk/admin/homepage?success='. urlencode('Gambar Untuk silde 1 berhasil di update!'));
+          header('Location: http://localhost/project_blk/v.1.0.3/admin/homepage?success='. urlencode('Gambar Untuk silde 1 berhasil di update!'));
 
         }else{
           
-          header('Location: http://localhost/project_blk/admin/homepage?err='. urlencode('Gambar Untuk silde 1 gagal di update!'));
+          header('Location: http://localhost/project_blk/v.1.0.3/admin/homepage?err='. urlencode('Gambar Untuk silde 1 gagal di update!'));
 
         }
 
@@ -80,11 +80,11 @@ if (isset($_POST['slide2'])) {
 
             if ($sql) {
               
-              header('Location: http://localhost/project_blk/admin/homepage?success='. urlencode('Gambar Untuk silde 1 berhasil di update!'));
+              header('Location: http://localhost/project_blk/v.1.0.3/admin/homepage?success='. urlencode('Gambar Untuk silde 1 berhasil di update!'));
 
             }else{
               
-              header('Location: http://localhost/project_blk/admin/homepage?err='. urlencode('Gambar Untuk silde 1 gagal di update!'));
+              header('Location: http://localhost/project_blk/v.1.0.3/admin/homepage?err='. urlencode('Gambar Untuk silde 1 gagal di update!'));
 
             }
 
@@ -98,11 +98,11 @@ if (isset($_POST['slide2'])) {
 
         if ($sql) {
           
-          header('Location: http://localhost/project_blk/admin/homepage?success='. urlencode('Gambar Untuk silde 1 berhasil di update!'));
+          header('Location: http://localhost/project_blk/v.1.0.3/admin/homepage?success='. urlencode('Gambar Untuk silde 1 berhasil di update!'));
 
         }else{
           
-          header('Location: http://localhost/project_blk/admin/homepage?err='. urlencode('Gambar Untuk silde 1 gagal di update!'));
+          header('Location: http://localhost/project_blk/v.1.0.3/admin/homepage?err='. urlencode('Gambar Untuk silde 1 gagal di update!'));
 
         }
 
@@ -134,11 +134,11 @@ if (isset($_POST['slide3'])) {
 
             if ($sql) {
               
-              header('Location: http://localhost/project_blk/admin/homepage?success='. urlencode('Gambar Untuk silde 1 berhasil di update!'));
+              header('Location: http://localhost/project_blk/v.1.0.3/admin/homepage?success='. urlencode('Gambar Untuk silde 1 berhasil di update!'));
 
             }else{
               
-              header('Location: http://localhost/project_blk/admin/homepage?err='. urlencode('Gambar Untuk silde 1 gagal di update!'));
+              header('Location: http://localhost/project_blk/v.1.0.3/admin/homepage?err='. urlencode('Gambar Untuk silde 1 gagal di update!'));
 
             }
 
@@ -152,11 +152,11 @@ if (isset($_POST['slide3'])) {
 
         if ($sql) {
           
-          header('Location: http://localhost/project_blk/admin/homepage?success='. urlencode('Gambar Untuk silde 1 berhasil di update!'));
+          header('Location: http://localhost/project_blk/v.1.0.3/admin/homepage?success='. urlencode('Gambar Untuk silde 1 berhasil di update!'));
 
         }else{
           
-          header('Location: http://localhost/project_blk/admin/homepage?err='. urlencode('Gambar Untuk silde 1 gagal di update!'));
+          header('Location: http://localhost/project_blk/v.1.0.3/admin/homepage?err='. urlencode('Gambar Untuk silde 1 gagal di update!'));
 
         }
 
