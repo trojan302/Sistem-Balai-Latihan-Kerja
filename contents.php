@@ -31,8 +31,12 @@ $monList = array(
     '12' => 'Desember'
 );
 
-$gelobangDibuka = strtotime($data['gelombangDibuka']);
-$gelobangDitutup = strtotime('+2 weeks', $gelobangDibuka);
+// $gelobangDibuka = strtotime($data['gelombangDibuka']);
+// $gelobangDitutup = strtotime('+2 weeks', $gelobangDibuka);
+
+$gelobangDibuka = new DateTime($data['gelombangDibuka']);
+$gelobangDitutup = $gelobangDibuka->modify('+2 weeks');
+$tutup = $gelobangDitutup->format('Y-m-d');
 
 ?>
 <!DOCTYPE html>
@@ -49,12 +53,17 @@ $gelobangDitutup = strtotime('+2 weeks', $gelobangDibuka);
 <body>
 
 	<div class="container-fluid">
-		<h5 class="text-center">
-			PEMERINTAH KABUPATEN MAGELANG <br> DINAS TENAGA KERJA SOSIAL DAN TRANSMIGRASI
-		</h5>
-		<h4 class="text-center">BALAI LATIHAN KERJA</h4>
+		<div class="text-center">
+		<class style="font-size:16px;" class="text-center">
+		PEMERINTAH KABUPATEN MAGELANG <br>
+		DINAS TENAGA KERJA SOSIAL DAN TRANSMIGRASI BALAI LATIHAN KERJA 
+		</class>
+		</div>
+
 		<address style="font-size:11px;" class="text-center">
-			<i>Jalan Magelang - Purworejo KM. 11, Tempuran, Sidoagung, Tempuran Magelang, Jawa Tengah <br> Kode Pos (56172) Telepon (0293) 335092</i>
+		<br> 
+		<i> Jalan Magelang - Purworejo KM. 11, Tempuran, Sidoagung, Tempuran Magelang, Jawa Tengah 
+		<br> Kode Pos (56172) Telepon (0293) 335092</i>
 		</address>
 		<hr>
 
@@ -84,11 +93,11 @@ $gelobangDitutup = strtotime('+2 weeks', $gelobangDibuka);
 		    	</tr>
 		    	<tr>
 		    		<th style="width:35%;">Waktu Ujian</th>
-					<td style="width:65%;">: <?= $dayList[$day] . ', '. date('d') .' - '. $monList[$mon] . ' - '. date('Y') ?></td>
+					<td style="width:65%;">: <?= $dayList[date('D', strtotime($tutup))] . ', '. date('d', strtotime($tutup)) .' - '. $monList[date('m', strtotime($tutup))] . ' - ' . date('Y', strtotime($tutup)) ?></td>
 		    	</tr>
 		    	<tr>
 		    		<th style="width:35%;">&nbsp;</th>
-					<td style="width:65%;">: 08 : 00 - Selesai</td>
+					<td style="width:65%;">: 08 : 00  WIB - Selesai</td>
 		    	</tr>
 		    </table>
 		    <br>

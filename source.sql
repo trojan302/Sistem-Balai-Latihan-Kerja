@@ -1,0 +1,15 @@
+use project_blk;
+-- SELECT COUNT(id_peserta) AS JUMLAH_PESERTA FROM peserta;
+-- SELECT * FROM staf_blk WHERE stafID=18;
+-- SELECT 
+-- 	peserta.nama AS NAMA_PESERTA, 
+-- 	kejuruan.nama_kejuruan AS KEJURUAN 
+-- FROM peserta, kejuruan 
+-- WHERE peserta.id_kejuruan = kejuruan.id_kejuruan 
+-- ORDER BY KEJURUAN;
+-- SELECT 
+-- 	peserta.nama,
+-- 	staf_blk.nama
+-- FROM peserta, staf_blk
+-- WHERE peserta.id_kejuruan = staf_blk.id_kejuruan GROUP BY peserta.nama;
+-- SHOW CREATE TABLE peserta;

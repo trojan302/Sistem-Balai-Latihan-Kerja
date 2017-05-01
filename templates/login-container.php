@@ -10,22 +10,20 @@
         <?php } ?>
         
         <form action="http://localhost/project_blk/v.1.0.3/config/prosesLogin.php" method="POST">
-            <form>
-              <div class="input-group input-group-md">
-                <span class="input-group-addon" id="sizing-addon">
-                  <i class="glyphicon glyphicon-envelope"></i>
-                </span>
-                <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon" name="username" required>
-              </div>
-              <br>
-              <div class="input-group input-group-md">
-                <span class="input-group-addon" id="sizing-addon">
-                  <i class="glyphicon glyphicon-lock"></i>
-                </span>
-                <input type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon" name="password" required>
-              </div>
-              <br>
-              <input type="submit" name="login" value="Login" class="btn btn-default">
-            </form>
+            <div class="input-group input-group-md">
+              <span class="input-group-addon" id="sizing-addon">
+                <i class="glyphicon glyphicon-envelope"></i>
+              </span>
+              <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon" name="username" required>
+            </div>
+            <br>
+            <div class="input-group input-group-md">
+              <span class="input-group-addon" id="sizing-addon">
+                <i class="glyphicon glyphicon-lock"></i>
+              </span>
+              <input type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon" name="password" required>
+            </div>
+            <br>
+            <input type="submit" name="login" value="Login" class="btn btn-default">
         </form>
       </div>

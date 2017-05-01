@@ -17,7 +17,7 @@ $dompdf = new Dompdf();
 $dompdf->loadHtml($contents);
 $dompdf->setPaper('A5', 'landscape');
 $dompdf->render();
-$dompdf->stream("dompdf_out.pdf", array("Attachment" => false));
+$dompdf->stream("pendaftaran-".date('d-m-Y').".pdf", array("Attachment" => 0));
 
 exit(0);
 

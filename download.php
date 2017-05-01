@@ -2,6 +2,16 @@
 
 require './config/conn.php';
 
+function _mime_content_type($filename) {
+    $result = new finfo();
+
+    if (is_resource($result) === true) {
+        return $result->file($filename, FILEINFO_MIME_TYPE);
+    }
+
+    return false;
+}
+
 if (isset($_GET['file'])) {
 
     $fileID = base64_decode($_GET['file']);
@@ -10,32 +20,25 @@ if (isset($_GET['file'])) {
     $query = mysql_query($sql);
     $result = mysql_fetch_assoc($query);
 
-    $filename = str_replace('http://localhost/project_blk/v.1.0.3/libs/materi/','../libs/materi/',$result['fileMateri']);
+    $file_name = str_replace('http://localhost/project_blk/v.1.0.3/libs/materi/','./libs/materi/',$result['fileMateri']);
     $file = str_replace('http://localhost/project_blk/v.1.0.3/libs/materi/','', $result['fileMateri']);
     $fileexts       = pathinfo($file);
     $basename       = $fileexts['basename'];
     $filename       = $fileexts['filename'];
     $ext            = $fileexts['extension'];
-    $mime           = mime_content_type('./libs/materi/'.$basename);
 
-    echo $mime;
+    $mime = mime_content_type($file_name);
 
-    // header yang menunjukkan nama file yang akan didownload
-    header("Content-Disposition: attachment; filename=".$basename.'.'.$ext);
-
-    // header yang menunjukkan ukuran file yang akan didownload
-    header("Content-length: ".$result['size']);
-
-    // header yang menunjukkan jenis file yang akan didownload
-    header("Content-type: ".$mime);
-
-    // proses membaca isi file yang akan didownload dari folder
-    $fp  = fopen("../libs/materi/'".$basename, 'r');
-    $content = fread($fp, filesize('../libs/materi/'.$basename));
-    fclose($fp);
-
-    // menampilkan isi file yang akan didownload
-    echo $content;
+    header('Content-Description: File Transfer');
+    header('Content-Type: '.$mime);
+    header('Content-Disposition: attachment; filename:'.$file_name);
+    header('Expires: 0');
+    header('Cache-Control: must-revalidate');
+    header('Pragma: public');
+    header('Content-Length: '.$result['size']);
+    ob_clean();
+    flush();
+    readfile($file_name);
 
     exit;
     

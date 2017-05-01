@@ -7,7 +7,7 @@ if (isset($_POST['login'])) {
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
-	$query 	= "SELECT * FROM users WHERE username = '$username' AND password = md5('$password') ";
+	$query 	= "SELECT * FROM users WHERE username = '".$username."' AND password = md5('".$password."') ";
 	$sql 	= mysql_query($query);
 	$data 	= mysql_num_rows($sql);
 

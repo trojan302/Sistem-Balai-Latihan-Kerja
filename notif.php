@@ -42,7 +42,7 @@ $username = generatorUsers($_SESSION['daftar']);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Website Balai Latihan Kerja Pemkab Magelang, Didedikasikan untuk memudahkan masyarakat mengakses informasi dari Balai Latihan Kerja Pemkab Magelang">
-    <meta name="author" content="Betta Dev Indonesia | Github : @trojan302 | Fanspage : @bettadevindonesia">
+    <meta name="author" content="K.N.Fadhilah">
 
     <title>Balai Latihan Kerja | PEMKAB Magelang</title>
     <link rel="icon" href="http://localhost/project_blk/v.1.0.3/libs/photos/icon_blk.png">
@@ -83,7 +83,7 @@ $username = generatorUsers($_SESSION['daftar']);
 
 	  <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; <?= date('Y'); ?> Betta Dev Indonesia, Ltd. 
+        <p>&copy; <?= date('Y'); ?> K.N.Fadhilah
         &middot; <a href="#">Privacy</a> 
         &middot; <a href="#">Terms</a></p>
       </footer>
