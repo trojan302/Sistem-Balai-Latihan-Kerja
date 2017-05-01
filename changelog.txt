@@ -2,6 +2,7 @@
 |				   CHANGE LOG FILE					  |
 +=========================================================================================+
 
+trojan302 - Fix bugs again! - Sun, 1 May, 2017 12:02:22 +0700
 trojan302 - Fix Backup Systems - Sat, 8 Apr 2017 03:25:23 +0700
 trojan302 - Fix Backup Systems - Sat, 8 Apr 2017 03:08:42 +0700
 trojan302 - Fix redundancies - Sun, 2 Apr 2017 12:01:03 +0700
